@@ -13,6 +13,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css" rel="stylesheet" />
+
     <title>Calculator</title>
   </head>
   <body>
@@ -46,12 +50,171 @@
         <!-- ============================================ -->
         <!-- ··········································· § DISPLAY ··· -->
         <!-- ======================================== -->
-        <div class="display container"></div>
+        <div class="display container">
+          <span class="display__arrow--left">
+            <i class="bx bxs-chevron-left"></i>
+          </span>
+          <div class="display__content-container"><span class="display__content">399,981</span></div>
+          <span class="display__arrow--right">
+            <i class="bx bxs-chevron-right"></i>
+          </span>
+        </div>
 
         <!-- ============================================ -->
         <!-- ··········································· § BUTTONS ··· -->
         <!-- ======================================== -->
-        <div class="buttons-container"></div>
+        <div class="buttons-container">
+          <button class="button" id="openParenthesis">
+            <span class="button__content">(</span>
+          </button>
+          <button class="button" id="closeParenthesis">
+            <span class="button__content">)</span>
+          </button>
+          <button class="button" id="cancelMemory">
+            <span class="button__content">Mc</span>
+          </button>
+          <button class="button" id="addToMemory">
+            <span class="button__content">M+</span>
+          </button>
+          <button class="button" id="subtractToMemory">
+            <span class="button__content">M-</span>
+          </button>
+          <button class="button" id="recallMemory">
+            <span class="button__content">Mr</span>
+          </button>
+          <button class="button" id="seven">
+            <span class="button__content">7</span>
+          </button>
+          <button class="button" id="eight">
+            <span class="button__content">8</span>
+          </button>
+          <button class="button" id="nine">
+            <span class="button__content">9</span>
+          </button>
+          <button class="button" id="delete">
+            <span class="button__content">Del</span>
+          </button>
+          <button class="button" id="secondFunction">
+            <span class="button__content">2nd</span>
+          </button>
+          <button class="button" id="powerOfTwo">
+            <span class="button__content">x<sup>2</sup></span>
+          </button>
+          <button class="button" id="powerOfThree">
+            <span class="button__content">x<sup>3</sup></span>
+          </button>
+          <button class="button" id="powerOfY">
+            <span class="button__content">x<sup>y</sup></span>
+          </button>
+          <button class="button" id="eToX">
+            <span class="button__content">e<sup>x</sup></span>
+          </button>
+          <button class="button" id="tenX">
+            <span class="button__content">10<sup>x</sup></span>
+          </button>
+          <button class="button" id="four">
+            <span class="button__content">4</span>
+          </button>
+          <button class="button" id="five">
+            <span class="button__content">5</span>
+          </button>
+          <button class="button" id="six">
+            <span class="button__content">6</span>
+          </button>
+          <button class="button" id="plus">
+            <span class="button__content">+</span>
+          </button>
+          <button class="button" id="inverse">
+            <span class="button__content"><sup>1</sup>⁄<sub>n</sub></span>
+          </button>
+          <button class="button" id="squareRoot">
+            <span class="button__content">√</span>
+          </button>
+          <button class="button" id="cubicRoot">
+            <span class="button__content">∛</span>
+          </button>
+          <button class="button" id="xRoot">
+            <span class="button__content"><sup>x</sup>√</span>
+          </button>
+          <button class="button" id="In">
+            <span class="button__content">In</span>
+          </button>
+          <button class="button" id="LogTen">
+            <span class="button__content">Log10</span>
+          </button>
+          <button class="button" id="one">
+            <span class="button__content">1</span>
+          </button>
+          <button class="button" id="two">
+            <span class="button__content">2</span>
+          </button>
+          <button class="button" id="three">
+            <span class="button__content">3</span>
+          </button>
+          <button class="button" id="minus">
+            <span class="button__content">-</span>
+          </button>
+          <button class="button" id="factorial">
+            <span class="button__content">x!</span>
+          </button>
+          <button class="button" id="sin">
+            <span class="button__content">sin</span>
+          </button>
+          <button class="button" id="cos">
+            <span class="button__content">cos</span>
+          </button>
+          <button class="button" id="tan">
+            <span class="button__content">tan</span>
+          </button>
+          <button class="button" id="eulersNumber">
+            <span class="button__content">e</span>
+          </button>
+          <button class="button" id="exponentialNotation">
+            <span class="button__content">EE</span>
+          </button>
+          <button class="button" id="comma">
+            <span class="button__content">.</span>
+          </button>
+          <button class="button" id="zero">
+            <span class="button__content">0</span>
+          </button>
+          <button class="button" id="divide">
+            <span class="button__content">/</span>
+          </button>
+          <button class="button" id="multiply">
+            <span class="button__content">x</span>
+          </button>
+          <button class="button" id="radial">
+            <span class="button__content">Rad</span>
+          </button>
+          <button class="button" id="sinh">
+            <span class="button__content">Sih</span>
+          </button>
+          <button class="button" id="cosh">
+            <span class="button__content">Cosh</span>
+          </button>
+          <button class="button" id="tanh">
+            <span class="button__content">Tanh</span>
+          </button>
+          <button class="button" id="pi">
+            <span class="button__content">Pi</span>
+          </button>
+          <button class="button" id="random">
+            <span class="button__content">Rand</span>
+          </button>
+          <button class="button" id="percentage">
+            <span class="button__content">%</span>
+          </button>
+          <button class="button" id="invertNumber">
+            <span class="button__content"><sup>+</sup>/<suy>-</suy></span>
+          </button>
+          <button class="button" id="reset">
+            <span class="button__content">Reset</span>
+          </button>
+          <button class="button" id="equal">
+            <span class="button__content">=</span>
+          </button>
+        </div>
       </section>
     </main>
   </body>
