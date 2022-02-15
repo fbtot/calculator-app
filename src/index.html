@@ -16,6 +16,43 @@
     <title>Calculator</title>
   </head>
   <body>
-    <h1>Hello world!</h1>
+    <main>
+      <section class="calculator dark-theme">
+        <!-- ============================================ -->
+        <!-- ··········································· § HEADER ··· -->
+        <!-- ======================================== -->
+        <header class="calculator__header">
+          <div class="header__title-container">
+            <h1 class="header__title">calc</h1>
+          </div>
+
+          <!-- =================================== § SWITCH === -->
+          <div class="header__options">
+            <span class="header__scientific-mode">Scientific</span>
+            <div class="header__theme theme-switch">
+              <span class="header__theme__title">Theme</span>
+              <input type="radio" name="switch" id="themeOne" class="theme-switch__radio header__theme__radio" checked />
+              <label for="themeOne" class="header__theme__label theme-switch__label">1</label>
+
+              <input type="radio" name="switch" id="themeTwo" class="theme-switch__radio header__theme__radio" />
+              <label for="themeTwo" class="header__theme__label theme-switch__label">2</label>
+
+              <input type="radio" name="switch" id="themeThree" class="theme-switch__radio header__theme__radio" />
+              <label for="themeOne" class="header__theme__label theme-switch__label">3</label>
+              <div class="theme-switch__indicator"></div>
+            </div>
+          </div>
+        </header>
+        <!-- ============================================ -->
+        <!-- ··········································· § DISPLAY ··· -->
+        <!-- ======================================== -->
+        <div class="display container"></div>
+
+        <!-- ============================================ -->
+        <!-- ··········································· § BUTTONS ··· -->
+        <!-- ======================================== -->
+        <div class="buttons-container"></div>
+      </section>
+    </main>
   </body>
 </html>
