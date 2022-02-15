@@ -1,5 +1,5 @@
-$base-font-size: 16px;
-$small-font-size: 16px * 0.9;
+$base-font-size: 32px;
+$small-font-size: 32px * 0.9;
 $width-700: 800px; // desktop
 $width-500: 600px; // tablet
 $width-300: 450px; // mobile
@@ -8,21 +8,141 @@ $mobile-width: $desktop-width - 1px;
 
 :root {
   // Colors
-  --text-color: hsl(0, 0%, 7%);
   --accent-color: hsl(216, 61%, 54%);
   --grey300: hsl(0, 0%, 70%);
   --grey500: hsl(0, 0%, 50%);
+
+  /* =================================== § DARK THEME === */
+  --desaturated-blue-900: hsl(224, 36%, 15%);
+  --desaturated-blue-800: hsl(223, 31%, 20%);
+  --desaturated-blue-700: hsl(222, 26%, 31%);
+  --desaturated-blue-D-700: hsl(221, 14%, 31%);
+  --desaturated-blue-650: hsl(224, 28%, 35%);
+  --desaturated-blue-500: hsl(225, 21%, 49%);
+
+  --red-500: hsl(6, 63%, 50%);
+  --red-350: hsl(6, 70%, 34%);
+
+  --red-D-100: hsl(30, 25%, 89%);
+  --orange-D-450: hsl(28, 16%, 65%);
+
+  /* =================================== § LIGHT THEME === */
+  --grey-100: hsl(0, 0, 90%);
+  --red-D-200: hsl(0, 5%, 81%);
+  --grey-050: hsl(0, 0, 93%);
+
+  --cyan-600: hsl(185, 42%, 37%);
+  --cyan-750: hsl(185, 58%, 25%);
+
+  --orange-600: hsl(25, 98%, 40%);
+  --orange-750: hsl(25, 99%, 27%);
+
+  --yellow-100: hsl(45, 7%, 89%);
+  --orange-D-400: hsl(35, 11%, 61%);
+
+  --yellow-D-200: hsl(60, 10%, 19%);
+
+  /* =================================== § TWILIGHT THEME === */
+  --violet-100: hsl(268, 75%, 9%);
+  --violet-150: hsl(268, 71%, 12%);
+
+  --violet-250: hsl(281, 89%, 26%);
+  --violet-500: hsl(285, 91%, 52%);
+
+  --cyan-S-550: hsl(176, 100%, 44%);
+  --cyan-S-300: hsl(177, 92%, 70%);
+
+  --violet-800: hsl(268, 47%, 21%);
+  --violet-350: hsl(290, 70%, 36%);
+
+  --yellow-400: hsl(52, 100%, 62%);
+  --blue-100: hsl(198, 20%, 13%);
 
   // Typography
   --base-font-size: #{$base-font-size};
   --small-font-size: #{$small-font-size};
   --line-height: 1.6em;
-  --body-font-family: "Open Sans", sans-serif;
-  --headings-font-family: "Raleway", sans-serif;
+  --body-font-family: 'Spartan', sans-serif;
+  --headings-font-family: 'Spartan', sans-serif;
   --h1-font-size: 2.7rem;
   --h2-font-size: 2rem;
   --h3-font-size: 1.5rem;
   --h4-font-size: 1.3rem;
   --h5-font-size: 1.1rem;
   --h6-font-size: 1rem;
+}
+
+.dark-theme {
+  :root {
+    /* ····················· § BACKGROUNDS ··· */
+    --main-background: var(--desaturated-blue-700);
+    --toggle-background: var(--desatrated-blue-200);
+    --keypad-background: var(--desatrated-blue-200);
+    --screen-background: var(--desatrated-blue-100);
+
+    /* ····················· § KEY BACKGROUNDS ··· */
+    --key-background: var(--desatrated-blue-500);
+    --key-shadow: var(--desatrated-blue-350);
+
+    --key-background2: var(--red-500);
+    --key-shadow2: var(--red-350);
+    --toggle: var(--red-500);
+
+    --key-background-3: var(--red-D-100);
+    --key-shadow: var(--orange-D-450);
+
+    /* ····················· § TEXT ··· */
+    --text-color: var(--desaturated-blue-D-700);
+    --text-color-2: white;
+  }
+}
+
+.light-theme {
+  :root {
+    /* ····················· § BACKGROUNDS ··· */
+    --main-background: var(--grey-100);
+    --toggle-background: var(--red-d-200);
+    --keypad-background: var(--red-d-200);
+    --screen-background: var(--grey-050);
+
+    /* ····················· § KEY BACKGROUNDS ··· */
+    --key-background: var(--cyan-600);
+    --key-shadow: var(--cyan-750);
+
+    --key-background2: var(--orange-600);
+    --key-shadow2: var(--orange-750);
+    --toggle: var(--orange-600);
+
+    --key-background-3: var(--yellow-100);
+    --key-shadow: var(--orange-D-400);
+
+    /* ····················· § TEXT ··· */
+    --text-color: var(--yellow-D-200);
+    --text-color-2: black;
+  }
+}
+
+.twilight-theme {
+  :root {
+    /* ····················· § BACKGROUNDS ··· */
+    --main-background: var(--violet-100);
+    --toggle-background: var(--violet-150);
+    --keypad-background: var(--violet-150);
+    --screen-background: var(--violet-150);
+
+    /* ····················· § KEY BACKGROUNDS ··· */
+    --key-background: var(--violet-250);
+    --key-shadow: var(--violet-500);
+
+    --key-background2: var(--cyan-S-550);
+    --key-shadow2: var(--cyan-S-300);
+    --toggle: var(--cyan-S-550);
+
+    --key-background-3: var(--violet-800);
+    --key-shadow: var(--violet-350);
+
+    /* ····················· § TEXT ··· */
+    --text-color: var(--yellow-400);
+    --text-color-2: white;
+  }
 }
