@@ -7,13 +7,13 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
   mode,
   entry: {
-    vendor: './src/js/vendor.js',
+    // vendor: './src/js/vendor.js',
     main: {
       import: './src/js/index.js',
     },
   },
   output: {
-    filename: '[name]-[contenthash].js',
+    filename: '[name][hashcontent].js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -38,7 +38,15 @@ module.exports = {
       template: './src/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: '[name]-[contenthash].css',
+      filename: '[name][hashcontent].css',
     }),
   ],
+  devServer: {
+    static: './dist/',
+    hot: true,
+    devMiddleware: {
+      publicPath: '/dist/',
+      writeToDisk: true,
+    },
+  },
 };
