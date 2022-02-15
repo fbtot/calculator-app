@@ -6,9 +6,14 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode,
-  entry: './src/js/index.js',
+  entry: {
+    vendor: './src/js/vendor.js',
+    main: {
+      import: './src/js/index.js',
+    },
+  },
   output: {
-    filename: 'main.js',
+    filename: '[name]-[contenthash].js',
     path: path.resolve(__dirname, 'dist'),
   },
   module: {
@@ -27,6 +32,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: '[name]-[contenthash].css',
+    }),
   ],
 };
