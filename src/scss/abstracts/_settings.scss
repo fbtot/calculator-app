@@ -29,13 +29,13 @@ $mobile-width: $desktop-width - 1px;
   .dark-theme {
     /* ····················· § BACKGROUNDS ··· */
     --main-background: var(--desaturated-blue-700);
-    --toggle-background: var(--desatrated-blue-200);
-    --keypad-background: var(--desatrated-blue-200);
-    --screen-background: var(--desatrated-blue-100);
+    --toggle-background: var(--desaturated-blue-800);
+    --keypad-background: var(--desaturated-blue-800);
+    --screen-background: var(--desaturated-blue-900);
 
     /* ····················· § KEY BACKGROUNDS ··· */
-    --key-background: var(--desatrated-blue-500);
-    --key-shadow: var(--desatrated-blue-350);
+    --key-background: var(--desaturated-blue-500);
+    --key-shadow: var(--desaturated-blue-350);
 
     --key-background2: var(--red-500);
     --key-shadow2: var(--red-350);
