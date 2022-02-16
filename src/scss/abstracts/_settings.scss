@@ -26,54 +26,7 @@ $mobile-width: $desktop-width - 1px;
   --red-D-100: hsl(30, 25%, 89%);
   --orange-D-450: hsl(28, 16%, 65%);
 
-  /* =================================== § LIGHT THEME === */
-  --grey-100: hsl(0, 0, 90%);
-  --red-D-200: hsl(0, 5%, 81%);
-  --grey-050: hsl(0, 0, 93%);
-
-  --cyan-600: hsl(185, 42%, 37%);
-  --cyan-750: hsl(185, 58%, 25%);
-
-  --orange-600: hsl(25, 98%, 40%);
-  --orange-750: hsl(25, 99%, 27%);
-
-  --yellow-100: hsl(45, 7%, 89%);
-  --orange-D-400: hsl(35, 11%, 61%);
-
-  --yellow-D-200: hsl(60, 10%, 19%);
-
-  /* =================================== § TWILIGHT THEME === */
-  --violet-100: hsl(268, 75%, 9%);
-  --violet-150: hsl(268, 71%, 12%);
-
-  --violet-250: hsl(281, 89%, 26%);
-  --violet-500: hsl(285, 91%, 52%);
-
-  --cyan-S-550: hsl(176, 100%, 44%);
-  --cyan-S-300: hsl(177, 92%, 70%);
-
-  --violet-800: hsl(268, 47%, 21%);
-  --violet-350: hsl(290, 70%, 36%);
-
-  --yellow-400: hsl(52, 100%, 62%);
-  --blue-100: hsl(198, 20%, 13%);
-
-  // Typography
-  --base-font-size: #{$base-font-size};
-  --small-font-size: #{$small-font-size};
-  --line-height: 1.6em;
-  --body-font-family: 'Spartan', sans-serif;
-  --headings-font-family: 'Spartan', sans-serif;
-  --h1-font-size: 2.7rem;
-  --h2-font-size: 2rem;
-  --h3-font-size: 1.5rem;
-  --h4-font-size: 1.3rem;
-  --h5-font-size: 1.1rem;
-  --h6-font-size: 1rem;
-}
-
-.dark-theme {
-  :root {
+  .dark-theme {
     /* ····················· § BACKGROUNDS ··· */
     --main-background: var(--desaturated-blue-700);
     --toggle-background: var(--desatrated-blue-200);
@@ -95,10 +48,23 @@ $mobile-width: $desktop-width - 1px;
     --text-color: var(--desaturated-blue-D-700);
     --text-color-2: white;
   }
-}
+  /* =================================== § LIGHT THEME === */
+  --grey-100: hsl(0, 0, 90%);
+  --red-D-200: hsl(0, 5%, 81%);
+  --grey-050: hsl(0, 0, 93%);
 
-.light-theme {
-  :root {
+  --cyan-600: hsl(185, 42%, 37%);
+  --cyan-750: hsl(185, 58%, 25%);
+
+  --orange-600: hsl(25, 98%, 40%);
+  --orange-750: hsl(25, 99%, 27%);
+
+  --yellow-100: hsl(45, 7%, 89%);
+  --orange-D-400: hsl(35, 11%, 61%);
+
+  --yellow-D-200: hsl(60, 10%, 19%);
+
+  .light-theme {
     /* ····················· § BACKGROUNDS ··· */
     --main-background: var(--grey-100);
     --toggle-background: var(--red-d-200);
@@ -120,10 +86,22 @@ $mobile-width: $desktop-width - 1px;
     --text-color: var(--yellow-D-200);
     --text-color-2: black;
   }
-}
+  /* =================================== § TWILIGHT THEME === */
+  --violet-100: hsl(268, 75%, 9%);
+  --violet-150: hsl(268, 71%, 12%);
 
-.twilight-theme {
-  :root {
+  --violet-250: hsl(281, 89%, 26%);
+  --violet-500: hsl(285, 91%, 52%);
+
+  --cyan-S-550: hsl(176, 100%, 44%);
+  --cyan-S-300: hsl(177, 92%, 70%);
+
+  --violet-800: hsl(268, 47%, 21%);
+  --violet-350: hsl(290, 70%, 36%);
+
+  --yellow-400: hsl(52, 100%, 62%);
+  --blue-100: hsl(198, 20%, 13%);
+  .twilight-theme {
     /* ····················· § BACKGROUNDS ··· */
     --main-background: var(--violet-100);
     --toggle-background: var(--violet-150);
@@ -145,4 +123,17 @@ $mobile-width: $desktop-width - 1px;
     --text-color: var(--yellow-400);
     --text-color-2: white;
   }
+
+  // Typography
+  --base-font-size: #{$base-font-size};
+  --small-font-size: #{$small-font-size};
+  --line-height: 1.6em;
+  --body-font-family: 'Spartan', sans-serif;
+  --headings-font-family: 'Spartan', sans-serif;
+  --h1-font-size: 2.7rem;
+  --h2-font-size: 2rem;
+  --h3-font-size: 1.5rem;
+  --h4-font-size: 1.3rem;
+  --h5-font-size: 1.1rem;
+  --h6-font-size: 1rem;
 }
