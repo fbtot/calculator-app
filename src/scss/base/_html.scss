@@ -1,4 +1,4 @@
-@use "../index.scss" as *;
+@use '../index.scss' as *;
 
 * {
   margin: 0;
@@ -17,7 +17,7 @@ body {
   line-height: 1.6em;
   font-family: var(--body-font-family);
   color: var(--text-color);
-  background-color: rgb(238, 238, 238);
+  background-color: var(--main-background);
 }
 
 /* ========================== § TYPOGRAPHY === */
@@ -133,6 +133,6 @@ select {
 }
 
 button,
-input[type="submit"] {
+input[type='submit'] {
   cursor: pointer;
 }
