@@ -70,13 +70,13 @@ $mobile-width: $desktop-width - 1px;
   .light-theme {
     /* ····················· § BACKGROUNDS ··· */
     --main-background: var(--grey-100);
-    --toggle-background: var(--red-d-200);
-    --keypad-background: var(--red-d-200);
+    --toggle-background: var(--red-D-200);
+    --keypad-background: var(--red-D-200);
     --screen-background: var(--grey-050);
 
     /* ····················· § KEY BACKGROUNDS ··· */
     --key-background-accent: var(--cyan-600);
-    --key-background-accent-hover: hsl(25, 98%, 40%);
+    --key-background-accent-hover: hsl(185, 58%, 33%);
     --key-shadow-accent: var(--cyan-750);
 
     --key-background-highlight: var(--orange-600);
@@ -85,7 +85,7 @@ $mobile-width: $desktop-width - 1px;
     --toggle: var(--orange-600);
 
     --key-background: var(--yellow-100);
-    --key-background-hover: hsl(45, 7%, 85%);
+    --key-background-hover: hsl(45, 7%, 87%);
     --key-shadow: var(--orange-D-400);
 
     /* ····················· § TEXT ··· */
@@ -125,7 +125,7 @@ $mobile-width: $desktop-width - 1px;
     --toggle: var(--cyan-S-550);
 
     --key-background: var(--violet-800);
-    --key-background-hover: hsl(52, 100%, 58%);
+    --key-background-hover: hsl(268, 47%, 18%);
     --key-shadow: var(--violet-350);
 
     /* ····················· § TEXT ··· */
