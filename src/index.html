@@ -5,10 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- STYLES -->
-    <!-- <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="stylesheet" href="./css/main.css" /> -->
-
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,9 +15,9 @@
 
     <title>Calculator</title>
   </head>
-  <body>
+  <body class="dark-theme">
     <main>
-      <section class="calculator dark-theme">
+      <section class="calculator normal-layout">
         <!-- ============================================ -->
         <!-- ··········································· § HEADER ··· -->
         <!-- ======================================== -->
@@ -64,160 +60,165 @@
         <!-- ··········································· § BUTTONS ··· -->
         <!-- ======================================== -->
         <div class="buttons-container">
-          <button class="button" id="openParenthesis">
+          <button class="button button--scientific-layout" id="openParenthesis">
             <span class="button__content">(</span>
           </button>
-          <button class="button" id="closeParenthesis">
+          <button class="button button--scientific-layout" id="closeParenthesis">
             <span class="button__content">)</span>
           </button>
-          <button class="button" id="cancelMemory">
+          <button class="button button--scientific-layout" id="cancelMemory">
             <span class="button__content">Mc</span>
           </button>
-          <button class="button" id="addToMemory">
+          <button class="button button--scientific-layout" id="addToMemory">
             <span class="button__content">M+</span>
           </button>
-          <button class="button" id="subtractToMemory">
+          <button class="button button--scientific-layout" id="subtractToMemory">
             <span class="button__content">M-</span>
           </button>
-          <button class="button" id="recallMemory">
+          <button class="button button--scientific-layout" id="recallMemory">
             <span class="button__content">Mr</span>
           </button>
-          <button class="button" id="seven">
+          <button class="button button--normal-layout" id="seven">
             <span class="button__content">7</span>
           </button>
-          <button class="button" id="eight">
+          <button class="button button--normal-layout" id="eight">
             <span class="button__content">8</span>
           </button>
-          <button class="button" id="nine">
+          <button class="button button--normal-layout" id="nine">
             <span class="button__content">9</span>
           </button>
-          <button class="button" id="delete">
+          <button class="button button--normal-layout" id="delete">
             <span class="button__content">Del</span>
           </button>
-          <button class="button" id="secondFunction">
+          <button class="button button--scientific-layout" id="secondFunction">
             <span class="button__content">2nd</span>
           </button>
-          <button class="button" id="powerOfTwo">
+          <button class="button button--scientific-layout" id="powerOfTwo">
             <span class="button__content">x<sup>2</sup></span>
           </button>
-          <button class="button" id="powerOfThree">
+          <button class="button button--scientific-layout" id="powerOfThree">
             <span class="button__content">x<sup>3</sup></span>
           </button>
-          <button class="button" id="powerOfY">
+          <button class="button button--scientific-layout" id="powerOfY">
             <span class="button__content">x<sup>y</sup></span>
           </button>
-          <button class="button" id="eToX">
+          <button class="button button--scientific-layout" id="eToX">
             <span class="button__content">e<sup>x</sup></span>
           </button>
-          <button class="button" id="tenX">
+          <button class="button button--scientific-layout" id="tenX">
             <span class="button__content">10<sup>x</sup></span>
           </button>
-          <button class="button" id="four">
+          <button class="button button--normal-layout" id="four">
             <span class="button__content">4</span>
           </button>
-          <button class="button" id="five">
+          <button class="button button--normal-layout" id="five">
             <span class="button__content">5</span>
           </button>
-          <button class="button" id="six">
+          <button class="button button--normal-layout" id="six">
             <span class="button__content">6</span>
           </button>
-          <button class="button" id="plus">
+          <button class="button button--normal-layout" id="plus">
             <span class="button__content">+</span>
           </button>
-          <button class="button" id="inverse">
+          <button class="button button--scientific-layout" id="inverse">
             <span class="button__content"><sup>1</sup>⁄<sub>n</sub></span>
           </button>
-          <button class="button" id="squareRoot">
+          <button class="button button--scientific-layout" id="squareRoot">
             <span class="button__content">√</span>
           </button>
-          <button class="button" id="cubicRoot">
+          <button class="button button--scientific-layout" id="cubicRoot">
             <span class="button__content">∛</span>
           </button>
-          <button class="button" id="xRoot">
+          <button class="button button--scientific-layout" id="xRoot">
             <span class="button__content"><sup>x</sup>√</span>
           </button>
-          <button class="button" id="In">
+          <button class="button button--scientific-layout" id="In">
             <span class="button__content">In</span>
           </button>
-          <button class="button" id="LogTen">
+          <button class="button button--scientific-layout" id="LogTen">
             <span class="button__content">Log10</span>
           </button>
-          <button class="button" id="one">
+          <button class="button button--normal-layout" id="one">
             <span class="button__content">1</span>
           </button>
-          <button class="button" id="two">
+          <button class="button button--normal-layout" id="two">
             <span class="button__content">2</span>
           </button>
-          <button class="button" id="three">
+          <button class="button button--normal-layout" id="three">
             <span class="button__content">3</span>
           </button>
-          <button class="button" id="minus">
+          <button class="button button--normal-layout" id="minus">
             <span class="button__content">-</span>
           </button>
-          <button class="button" id="factorial">
+          <button class="button button--scientific-layout" id="factorial">
             <span class="button__content">x!</span>
           </button>
-          <button class="button" id="sin">
+          <button class="button button--scientific-layout" id="sin">
             <span class="button__content">sin</span>
           </button>
-          <button class="button" id="cos">
+          <button class="button button--scientific-layout" id="cos">
             <span class="button__content">cos</span>
           </button>
-          <button class="button" id="tan">
+          <button class="button button--scientific-layout" id="tan">
             <span class="button__content">tan</span>
           </button>
-          <button class="button" id="eulersNumber">
+          <button class="button button--scientific-layout" id="eulersNumber">
             <span class="button__content">e</span>
           </button>
-          <button class="button" id="exponentialNotation">
+          <button class="button button--scientific-layout" id="exponentialNotation">
             <span class="button__content">EE</span>
           </button>
-          <button class="button" id="comma">
+          <button class="button button--normal-layout" id="comma">
             <span class="button__content">.</span>
           </button>
-          <button class="button" id="zero">
+          <button class="button button--normal-layout" id="zero">
             <span class="button__content">0</span>
           </button>
-          <button class="button" id="divide">
+          <button class="button button--normal-layout" id="divide">
             <span class="button__content">/</span>
           </button>
-          <button class="button" id="multiply">
+          <button class="button button--normal-layout" id="multiply">
             <span class="button__content">x</span>
           </button>
-          <button class="button" id="radial">
+          <button class="button button--scientific-layout" id="radial">
             <span class="button__content">Rad</span>
           </button>
-          <button class="button" id="sinh">
+          <button class="button button--scientific-layout" id="sinh">
             <span class="button__content">Sih</span>
           </button>
-          <button class="button" id="cosh">
+          <button class="button button--scientific-layout" id="cosh">
             <span class="button__content">Cosh</span>
           </button>
-          <button class="button" id="tanh">
+          <button class="button button--scientific-layout" id="tanh">
             <span class="button__content">Tanh</span>
           </button>
-          <button class="button" id="pi">
+          <button class="button button--scientific-layout" id="pi">
             <span class="button__content">Pi</span>
           </button>
-          <button class="button" id="random">
+          <button class="button button--scientific-layout" id="random">
             <span class="button__content">Rand</span>
           </button>
-          <button class="button" id="percentage">
+          <button class="button button--normal-layout" id="percentage">
             <span class="button__content">%</span>
           </button>
-          <button class="button" id="invertNumber">
-            <span class="button__content"><sup>+</sup>/<suy>-</suy></span>
+          <button class="button button--normal-layout" id="invertNumber">
+            <span class="button__content"><sup>+</sup>/<sup>-</sup></span>
           </button>
-          <button class="button" id="reset">
+          <button class="button button--normal-layout" id="reset">
             <span class="button__content">Reset</span>
           </button>
-          <button class="button" id="equal">
+          <button class="button button--normal-layout" id="equal">
             <span class="button__content">=</span>
           </button>
         </div>
       </section>
     </main>
-    <!-- MathJax -->
+
+    <!-- ============================================ -->
+    <!-- ··········································· § SCRIPTS ··· -->
+    <!-- ======================================== -->
+
+    <!-- =================================== § MATHJAX === -->
     <script>
       MathJax = {
         tex: {
