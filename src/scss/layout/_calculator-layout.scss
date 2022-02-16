@@ -14,7 +14,7 @@
 
 .buttons-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 0.8rem;
   padding: 1rem;
   width: 100%;
@@ -43,7 +43,7 @@
 
   @include mq($desktop-width, up) {
     .buttons-container {
-      grid-template-columns: repeat(10, 1fr);
+      grid-template-columns: repeat(10, minmax(0, 1fr));
     }
   }
 }
