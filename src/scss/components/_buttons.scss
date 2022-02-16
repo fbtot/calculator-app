@@ -22,9 +22,10 @@
   position: relative;
   height: 2rem;
   font-family: var(--body-font-family);
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+  // display: flex;
+  // align-content: center;
+  // justify-content: center;
+
   border: none;
   border-radius: 0.3rem;
   color: var(--text-color);
@@ -66,10 +67,15 @@
 
 .button__content {
   font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+  vertical-align: -0.3rem;
 }
 
 .button__content--small {
+  @extend .button__content;
   font-size: 0.6rem;
+  vertical-align: 0rem;
 }
 
 .uppercase {
