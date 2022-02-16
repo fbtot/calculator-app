@@ -14,8 +14,8 @@
 /* =================================== § COLORS === */
 // class, background, hover, shadow
 @include buttonColors(button, var(--key-background), var(--key-background-hover), var(--key-shadow));
-@include buttonColors(button--accent, var(--key-background-accent), var(--key-background-hover), var(--key-shadow-accent));
-@include buttonColors(button--highlight, var(--key-background-highlight), var(--key-background-hover), var(--key-shadow-highlight));
+@include buttonColors(button--accent, var(--key-background-accent), var(--key-background-accent-hover), var(--key-shadow-accent));
+@include buttonColors(button--highlight, var(--key-background-highlight), var(--key-background-highlight-hover), var(--key-shadow-highlight));
 
 .button {
   --transition: transform 0.03s ease-in;

@@ -39,7 +39,7 @@ $mobile-width: $desktop-width - 1px;
     --key-shadow-accent: var(--desaturated-blue-650);
 
     --key-background-highlight: var(--red-500);
-    --key-background-highlight: hsl(6, 63%, 45%);
+    --key-background-highlight-hover: hsl(6, 63%, 45%);
     --key-shadow-highlight: var(--red-350);
     --toggle: var(--red-500);
 
@@ -80,7 +80,7 @@ $mobile-width: $desktop-width - 1px;
     --key-shadow-accent: var(--cyan-750);
 
     --key-background-highlight: var(--orange-600);
-    --key-background-hover: hsl(25, 98%, 36%);
+    --key-background-highlight-hover: hsl(25, 98%, 36%);
     --key-shadow-highlight: var(--orange-750);
     --toggle: var(--orange-600);
 
