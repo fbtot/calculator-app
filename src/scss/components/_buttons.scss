@@ -12,6 +12,7 @@
 }
 
 /* =================================== § COLORS === */
+// class, background, hover, shadow
 @include buttonColors(button, var(--key-background), var(--key-background-hover), var(--key-shadow));
 @include buttonColors(button--accent, var(--key-background-accent), var(--key-background-hover), var(--key-shadow-accent));
 @include buttonColors(button--highlight, var(--key-background-highlight), var(--key-background-hover), var(--key-shadow-highlight));
@@ -68,8 +69,11 @@
 }
 
 .button__content--small {
-  text-transform: uppercase;
   font-size: 0.6rem;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .button--accent,
