@@ -34,14 +34,17 @@ $mobile-width: $desktop-width - 1px;
     --screen-background: var(--desaturated-blue-900);
 
     /* ····················· § KEY BACKGROUNDS ··· */
-    --key-background: var(--desaturated-blue-500);
-    --key-shadow: var(--desaturated-blue-350);
+    --key-background-accent: var(--desaturated-blue-500);
+    --key-background-accent-hover: hsl(225, 21%, 45%);
+    --key-shadow-accent: var(--desaturated-blue-650);
 
-    --key-background2: var(--red-500);
-    --key-shadow2: var(--red-350);
+    --key-background-highlight: var(--red-500);
+    --key-background-highlight: hsl(6, 63%, 45%);
+    --key-shadow-highlight: var(--red-350);
     --toggle: var(--red-500);
 
-    --key-background-3: var(--red-D-100);
+    --key-background: var(--red-D-100);
+    --key-background-hover: hsl(30, 25%, 85%);
     --key-shadow: var(--orange-D-450);
 
     /* ····················· § TEXT ··· */
@@ -72,14 +75,17 @@ $mobile-width: $desktop-width - 1px;
     --screen-background: var(--grey-050);
 
     /* ····················· § KEY BACKGROUNDS ··· */
-    --key-background: var(--cyan-600);
-    --key-shadow: var(--cyan-750);
+    --key-background-accent: var(--cyan-600);
+    --key-background-accent-hover: hsl(25, 98%, 40%);
+    --key-shadow-accent: var(--cyan-750);
 
-    --key-background2: var(--orange-600);
-    --key-shadow2: var(--orange-750);
+    --key-background-highlight: var(--orange-600);
+    --key-background-hover: hsl(25, 98%, 36%);
+    --key-shadow-highlight: var(--orange-750);
     --toggle: var(--orange-600);
 
-    --key-background-3: var(--yellow-100);
+    --key-background: var(--yellow-100);
+    --key-background-hover: hsl(45, 7%, 85%);
     --key-shadow: var(--orange-D-400);
 
     /* ····················· § TEXT ··· */
@@ -109,14 +115,17 @@ $mobile-width: $desktop-width - 1px;
     --screen-background: var(--violet-150);
 
     /* ····················· § KEY BACKGROUNDS ··· */
-    --key-background: var(--violet-250);
-    --key-shadow: var(--violet-500);
+    --key-background-accent: var(--violet-250);
+    --key-background-accent-hover: hsl(281, 89%, 22%);
+    --key-shadow-accent: var(--violet-500);
 
-    --key-background2: var(--cyan-S-550);
-    --key-shadow2: var(--cyan-S-300);
+    --key-background-highlight: var(--cyan-S-550);
+    --key-background-highlight-hover: hsl(176, 100%, 40%);
+    --key-shadow-highlight: var(--cyan-S-300);
     --toggle: var(--cyan-S-550);
 
-    --key-background-3: var(--violet-800);
+    --key-background: var(--violet-800);
+    --key-background-hover: hsl(52, 100%, 58%);
     --key-shadow: var(--violet-350);
 
     /* ····················· § TEXT ··· */
