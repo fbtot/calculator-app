@@ -17,7 +17,7 @@
   </head>
   <body class="dark-theme">
     <main>
-      <section class="calculator normal-layout">
+      <section id="calculator" class="calculator normal-layout">
         <!-- ============================================ -->
         <!-- ··········································· § HEADER ··· -->
         <!-- ======================================== -->
@@ -28,7 +28,7 @@
 
           <!-- =================================== § SWITCH === -->
           <div class="header__options">
-            <span class="header__scientific-mode">Scientific</span>
+            <span id="scientificModeSwitch" class="header__scientific-mode">Scientific</span>
             <div class="header__theme theme-switch">
               <span class="header__theme__title">Theme</span>
               <input type="radio" name="switch" id="themeOne" class="theme-switch__radio header__theme__radio" checked />
@@ -198,10 +198,10 @@
           <button class="button button--scientific-layout" id="random">
             <span class="button__content">Rand</span>
           </button>
-          <button class="button button--normal-layout" id="percentage">
+          <button class="button button--scientific-layout" id="percentage">
             <span class="button__content">%</span>
           </button>
-          <button class="button button--normal-layout" id="invertNumber">
+          <button class="button button--scientific-layout" id="invertNumber">
             <span class="button__content"><sup>+</sup>/<sup>-</sup></span>
           </button>
           <button class="button button--normal-layout" id="reset">

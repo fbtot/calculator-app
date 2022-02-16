@@ -3,3 +3,8 @@
 .container {
   border-radius: 0.5rem;
 }
+
+.buttons-container {
+  @extend .container;
+  background-color: var(--keypad-background);
+}
