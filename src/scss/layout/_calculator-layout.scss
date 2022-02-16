@@ -1,19 +1,20 @@
 @use '../index.scss' as *;
 
 .calculator {
+  margin: 1rem;
   @include mq($desktop-width, up) {
     &.normal-layout {
-      width: 540px;
+      max-width: 540px;
     }
     &.scientific-layout {
-      width: 1000px;
+      max-width: 1000px;
     }
   }
 }
 
 .buttons-container {
   display: grid;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 0.8rem;
   padding: 0.8rem;
 }
@@ -21,10 +22,6 @@
 .normal-layout {
   .button--scientific-layout {
     display: none;
-  }
-
-  .buttons-container {
-    grid-template-columns: repeat(4, 1fr);
   }
 
   #reset {
@@ -37,7 +34,15 @@
 }
 
 .scientific-layout {
-  .buttons-container {
-    grid-template-columns: repeat(10, 1fr);
+  @include mq($desktop-width, down) {
+    .button--normal-layout {
+      display: none;
+    }
+  }
+
+  @include mq($desktop-width, up) {
+    .buttons-container {
+      grid-template-columns: repeat(10, 1fr);
+    }
   }
 }
