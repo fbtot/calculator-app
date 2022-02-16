@@ -1,5 +1,39 @@
 @use '../index.scss' as *;
 
 .display {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  height: 4rem;
   background-color: var(--screen-background);
+  color: var(--text-color-2);
+  text-align: right;
+}
+
+.display__arrow--left,
+.display__arrow--right {
+  display: flex; // it centers the arrows vertically
+  cursor: pointer;
+}
+
+.display__arrow--right {
+  justify-self: right;
+  // margin-left: auto;
+}
+
+.display__content-container {
+  width: 100%;
+  text-align: right;
+  font-size: 1.5rem;
+  overflow: hidden;
+  padding: 3px;
+  position: relative;
+  height: 60px;
+  margin-left: auto;
+}
+
+.display__content {
+  position: absolute;
+  right: 0;
+  top: 0.25rem;
 }
