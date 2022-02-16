@@ -49,4 +49,5 @@ module.exports = {
       writeToDisk: true,
     },
   },
+  devtool: 'source-map',
 };
