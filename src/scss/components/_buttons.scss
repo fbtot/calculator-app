@@ -44,6 +44,7 @@
     transform: translate3d(0, 0.2rem, -0.2rem);
     border-radius: inherit;
     transition: var(--transition);
+    box-shadow: 0 0.2rem 0.05rem rgba(black, 0.1);
   }
 
   &:hover {
@@ -52,15 +53,17 @@
 
     &:before {
       transform: translate3d(0, 0.15rem, -0.2rem);
+      box-shadow: 0 0.15rem 0.05rem rgba(black, 0.1);
     }
   }
 
   &:active {
-    transform: translate3d(0, 0.2rem, 0);
+    transform: translate3d(0, 0.15rem, 0);
     transition: var(--transition);
 
     &:before {
-      transform: translate3d(0, 0, -0.2rem);
+      transform: translate3d(0, 0.05rem, -0.2rem);
+      box-shadow: 0 0 0 rgba(black, 0.1);
     }
   }
 }
