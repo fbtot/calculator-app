@@ -1,0 +1,30 @@
+@use '../index.scss' as *;
+
+.calculator__header {
+  display: flex;
+  color: var(--text-color-2);
+  margin-bottom: 0.5rem;
+}
+
+.header__title {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.header__options {
+  margin-left: auto;
+  display: flex;
+  font-size: 0.35rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+}
+
+.header__scientific-mode {
+  margin-right: 0.5rem;
+  color: var(--text-color-2);
+  cursor: pointer;
+
+  &.active {
+    color: var(--text-color-3);
+  }
+}

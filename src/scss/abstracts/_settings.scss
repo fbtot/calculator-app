@@ -50,6 +50,8 @@ $mobile-width: $desktop-width - 1px;
     /* ····················· § TEXT ··· */
     --text-color: var(--desaturated-blue-D-700);
     --text-color-2: white;
+    --text-color-3: var(--red-500);
+    --text-color-4: var(--desaturated-blue-800);
   }
   /* =================================== § LIGHT THEME === */
   --grey-100: hsl(0, 0, 90%);
@@ -91,6 +93,8 @@ $mobile-width: $desktop-width - 1px;
     /* ····················· § TEXT ··· */
     --text-color: var(--yellow-D-200);
     --text-color-2: black;
+    --text-color-3: var(--orange-600);
+    --text-color-4: var(--red-D-200);
   }
   /* =================================== § TWILIGHT THEME === */
   --violet-100: hsl(268, 75%, 9%);
@@ -131,6 +135,8 @@ $mobile-width: $desktop-width - 1px;
     /* ····················· § TEXT ··· */
     --text-color: var(--yellow-400);
     --text-color-2: white;
+    --text-color-3: var(--cyan-S-550);
+    --text-color-4: var(--violet-150);
   }
 
   // Typography
