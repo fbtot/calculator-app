@@ -2,6 +2,7 @@
 
 .calculator {
   margin: 1rem;
+  transition: max-width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   @include mq($desktop-width, up) {
     &.normal-layout {
       max-width: 540px;
