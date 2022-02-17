@@ -31,15 +31,19 @@
             <span id="scientificModeSwitch" class="header__scientific-mode">Scientific</span>
             <div class="header__theme theme-switch">
               <span class="header__theme__title">Theme</span>
-              <input type="radio" name="switch" id="themeOne" class="theme-switch__radio header__theme__radio" checked />
-              <label for="themeOne" class="header__theme__label theme-switch__label">1</label>
 
-              <input type="radio" name="switch" id="themeTwo" class="theme-switch__radio header__theme__radio" />
-              <label for="themeTwo" class="header__theme__label theme-switch__label">2</label>
-
-              <input type="radio" name="switch" id="themeThree" class="theme-switch__radio header__theme__radio" />
-              <label for="themeOne" class="header__theme__label theme-switch__label">3</label>
-              <div class="theme-switch__indicator"></div>
+              <div class="theme-switch__radio-label-container">
+                <div class="theme-switch__labels-container">
+                  <label for="themeOne" class="header__theme__label theme-switch__label">1</label>
+                  <label for="themeTwo" class="header__theme__label theme-switch__label">2</label>
+                  <label for="themeOne" class="header__theme__label theme-switch__label">3</label>
+                </div>
+                <div class="theme-switch__radio-container">
+                  <input type="radio" name="switch" id="themeOne" class="theme-switch__radio header__theme__radio" checked />
+                  <input type="radio" name="switch" id="themeTwo" class="theme-switch__radio header__theme__radio" />
+                  <input type="radio" name="switch" id="themeThree" class="theme-switch__radio header__theme__radio" />
+                </div>
+              </div>
             </div>
           </div>
         </header>
