@@ -22,6 +22,7 @@
     border: var(--border-width) solid var(--toggle-background);
     border-radius: 10rem;
     background: var(--toggle-background);
+    cursor: pointer;
   }
 
   &:after {
@@ -60,6 +61,7 @@
   width: 0.2rem;
   height: 1.5rem;
   line-height: 1rem;
+  cursor: pointer;
 
   &:first-child {
     justify-content: left;
