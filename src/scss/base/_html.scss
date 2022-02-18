@@ -12,6 +12,8 @@ html {
 }
 
 body {
+  display: grid;
+  align-items: center;
   min-width: 100vw;
   min-height: 100vh;
   line-height: 1.6em;

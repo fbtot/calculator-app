@@ -5,19 +5,18 @@
   --grid-gap: 0.8rem;
   --button-height: 2rem;
 
+  margin: auto;
+  padding: 1rem;
+  transition: max-width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  max-width: 540px;
+
   @include mq($very-small-layout, down) {
     --grid-gap: 0.5rem;
   }
 
-  padding: 1rem;
-  transition: max-width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-
   @include mq($desktop-width, up) {
-    &.normal-layout {
-      max-width: 540px;
-    }
     &.scientific-layout {
-      max-width: 1000px;
+      max-width: 1200px;
     }
   }
 }
