@@ -20,7 +20,7 @@
 .button {
   --transition: transform 0.03s ease-in;
   position: relative;
-  height: 2rem;
+  height: var(--button-height); // this variable is declared in .calculator in _calculator-layout
   font-family: var(--body-font-family);
   // display: flex;
   // align-content: center;
