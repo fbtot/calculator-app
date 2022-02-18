@@ -4,6 +4,10 @@
   display: flex;
   color: var(--text-color-2);
   margin-bottom: 0.5rem;
+
+  @include mq($very-small-layout, down) {
+    flex-direction: column;
+  }
 }
 
 .header__title {
@@ -12,11 +16,32 @@
 }
 
 .header__options {
-  margin-left: auto;
   display: flex;
   font-size: 0.35rem;
   letter-spacing: 0.05rem;
   text-transform: uppercase;
+
+  @include mq($very-small-layout, up) {
+    margin-left: auto;
+  }
+
+  @include mq($very-small-layout, down) {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+}
+
+.header__theme__title {
+  @include mq($very-small-layout, down) {
+    order: 2;
+    margin-left: 0.5rem;
+  }
+}
+
+.header__theme__radio-label-container {
+  @include mq($very-small-layout, down) {
+    margin-left: 0;
+  }
 }
 
 .header__scientific-mode {
