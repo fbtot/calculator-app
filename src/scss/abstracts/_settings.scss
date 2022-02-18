@@ -20,6 +20,8 @@ $very-small-layout: 400px;
   --desaturated-blue-D-700: hsl(221, 14%, 31%);
   --desaturated-blue-650: hsl(224, 28%, 35%);
   --desaturated-blue-500: hsl(225, 21%, 49%);
+  --desaturated-blue-300: hsl(224, 18%, 65%);
+  --desaturated-blue-100: hsl(225, 11%, 85%);
 
   --red-500: hsl(6, 63%, 50%);
   --red-350: hsl(6, 70%, 34%);
@@ -38,6 +40,10 @@ $very-small-layout: 400px;
     --key-background-accent: var(--desaturated-blue-500);
     --key-background-accent-hover: hsl(225, 21%, 45%);
     --key-shadow-accent: var(--desaturated-blue-650);
+
+    --key-background-accent-pale: var(--desaturated-blue-100);
+    --key-background-accent-hover-pale: hsl(225, 11%, 80%);
+    --key-shadow-accent-pale: var(--desaturated-blue-300);
 
     --key-background-highlight: var(--red-500);
     --key-background-highlight-hover: hsl(6, 63%, 45%);

@@ -16,6 +16,7 @@
 @include buttonColors(button, var(--key-background), var(--key-background-hover), var(--key-shadow));
 @include buttonColors(button--accent, var(--key-background-accent), var(--key-background-accent-hover), var(--key-shadow-accent));
 @include buttonColors(button--highlight, var(--key-background-highlight), var(--key-background-highlight-hover), var(--key-shadow-highlight));
+@include buttonColors(button--accent--pale, var(--key-background-accent-pale), var(--key-background-accent-hover-pale), var(--key-shadow-accent-pale));
 
 .button {
   --transition: transform 0.03s ease-in;
