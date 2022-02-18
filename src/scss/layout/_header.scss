@@ -32,6 +32,11 @@
 }
 
 .header__theme__title {
+  i {
+    font-size: 200%;
+    vertical-align: -0.1rem;
+  }
+
   @include mq($very-small-layout, down) {
     order: 2;
     margin-left: 0.5rem;
