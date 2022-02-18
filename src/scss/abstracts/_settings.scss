@@ -53,6 +53,7 @@ $very-small-layout: 400px;
     --key-background: var(--red-D-100);
     --key-background-hover: hsl(30, 25%, 85%);
     --key-shadow: var(--orange-D-450);
+    --key-light: hsla(52, 100%, 92%, 0.7);
 
     /* ····················· § TEXT ··· */
     --text-color: var(--desaturated-blue-D-700);
@@ -102,6 +103,7 @@ $very-small-layout: 400px;
     --key-background: var(--yellow-100);
     --key-background-hover: hsl(45, 7%, 87%);
     --key-shadow: var(--orange-D-400);
+    --key-light: hsla(52, 100%, 92%, 0.7);
 
     /* ····················· § TEXT ··· */
     --text-color: var(--yellow-D-200);
@@ -126,6 +128,7 @@ $very-small-layout: 400px;
   --yellow-400: hsl(52, 100%, 62%);
   --yellow-300: hsl(52, 100%, 32%);
   --blue-100: hsl(198, 20%, 13%);
+
   .twilight-theme {
     /* ····················· § BACKGROUNDS ··· */
     --main-background: var(--violet-900);
@@ -150,6 +153,8 @@ $very-small-layout: 400px;
     --key-background: var(--violet-800);
     --key-background-hover: hsl(268, 47%, 18%);
     --key-shadow: var(--violet-350);
+
+    --key-light: hsla(52, 100%, 92%, 0.7);
 
     /* ····················· § TEXT ··· */
     --text-color: var(--yellow-400);
