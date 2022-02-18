@@ -3,18 +3,17 @@ const calculator = document.getElementById('calculator');
 
 function layoutSwitch() {
   scientificModeSwitch.addEventListener('click', () => {
-    const calculatorClassList = calculator.classList;
-
-    if (calculatorClassList.contains('normal-layout')) {
-      calculatorClassList.remove('normal-layout');
-      calculatorClassList.add('scientific-layout');
-      scientificModeSwitch.classList.add('active');
-    } else if (calculatorClassList.contains('scientific-layout')) {
-      calculatorClassList.remove('scientific-layout');
-      calculatorClassList.add('normal-layout');
-      scientificModeSwitch.classList.remove('active');
-    }
+    switchClass(calculator, 'normal-layout', 'scientific-layout');
+    scientificModeSwitch.classList.toggle('active');
   });
 }
 
-export default layoutSwitch;
+function switchClass(element, class1, class2) {
+  if (element.classList.contains(class1)) {
+    element.classList.replace(class1, class2);
+  } else if (element.classList.contains(class2)) {
+    element.classList.replace(class2, class1);
+  }
+}
+
+export { switchClass, layoutSwitch };

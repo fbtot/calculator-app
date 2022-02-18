@@ -1,4 +1,4 @@
 import '../scss/main.scss';
-import layoutSwitch from './changeLayout';
+import { layoutSwitch } from './changeLayout';
 
 layoutSwitch();
