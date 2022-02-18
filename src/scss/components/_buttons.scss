@@ -2,6 +2,13 @@
 @mixin buttonColors($class, $background, $hover, $shadow) {
   .#{$class} {
     background-color: $background;
+
+    @if $class == button--accent--pale {
+      .twilight-theme & {
+        color: var(--violet-500);
+      }
+    }
+
     &:hover {
       background-color: $hover;
     }

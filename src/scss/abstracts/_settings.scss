@@ -110,10 +110,11 @@ $very-small-layout: 400px;
     --text-color-4: var(--red-D-200);
   }
   /* =================================== § TWILIGHT THEME === */
-  --violet-100: hsl(268, 75%, 9%);
-  --violet-150: hsl(268, 71%, 12%);
+  --violet-900: hsl(268, 75%, 9%);
+  --violet-950: hsl(268, 71%, 12%);
 
-  --violet-250: hsl(281, 89%, 26%);
+  --violet-850: hsl(281, 89%, 26%);
+  --violet-870: hsl(281, 89%, 29%);
   --violet-500: hsl(285, 91%, 52%);
 
   --cyan-S-550: hsl(176, 100%, 44%);
@@ -123,18 +124,23 @@ $very-small-layout: 400px;
   --violet-350: hsl(290, 70%, 36%);
 
   --yellow-400: hsl(52, 100%, 62%);
+  --yellow-300: hsl(52, 100%, 32%);
   --blue-100: hsl(198, 20%, 13%);
   .twilight-theme {
     /* ····················· § BACKGROUNDS ··· */
-    --main-background: var(--violet-100);
-    --toggle-background: var(--violet-150);
-    --keypad-background: var(--violet-150);
-    --screen-background: var(--violet-150);
+    --main-background: var(--violet-900);
+    --toggle-background: var(--violet-950);
+    --keypad-background: var(--violet-950);
+    --screen-background: var(--violet-950);
 
     /* ····················· § KEY BACKGROUNDS ··· */
-    --key-background-accent: var(--violet-250);
+    --key-background-accent: var(--violet-850);
     --key-background-accent-hover: hsl(281, 89%, 22%);
     --key-shadow-accent: var(--violet-500);
+
+    --key-background-accent-pale: var(--yellow-400);
+    --key-background-accent-hover-pale: hsl(51, 100%, 56%);
+    --key-shadow-accent-pale: var(--yellow-300);
 
     --key-background-highlight: var(--cyan-S-550);
     --key-background-highlight-hover: hsl(176, 100%, 40%);
@@ -149,7 +155,7 @@ $very-small-layout: 400px;
     --text-color: var(--yellow-400);
     --text-color-2: white;
     --text-color-3: var(--cyan-S-550);
-    --text-color-4: var(--violet-150);
+    --text-color-4: var(--violet-950);
   }
 
   // Typography
