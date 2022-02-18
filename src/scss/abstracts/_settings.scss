@@ -63,10 +63,12 @@ $very-small-layout: 400px;
   /* =================================== § LIGHT THEME === */
   --grey-100: hsl(0, 0, 90%);
   --red-D-200: hsl(0, 5%, 81%);
-  --grey-050: hsl(0, 0, 93%);
+  --grey-050: #ededed;
 
   --cyan-600: hsl(185, 42%, 37%);
   --cyan-750: hsl(185, 58%, 25%);
+  --cyan-200: hsl(185, 8%, 87%);
+  --cyan-350: hsl(185, 25%, 55%);
 
   --orange-600: hsl(25, 98%, 40%);
   --orange-750: hsl(25, 99%, 27%);
@@ -87,6 +89,10 @@ $very-small-layout: 400px;
     --key-background-accent: var(--cyan-600);
     --key-background-accent-hover: hsl(185, 58%, 33%);
     --key-shadow-accent: var(--cyan-750);
+
+    --key-background-accent-pale: var(--cyan-200);
+    --key-background-accent-hover-pale: hsl(185, 9%, 85%);
+    --key-shadow-accent-pale: var(--cyan-350);
 
     --key-background-highlight: var(--orange-600);
     --key-background-highlight-hover: hsl(25, 98%, 36%);
