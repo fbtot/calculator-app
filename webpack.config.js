@@ -32,6 +32,10 @@ module.exports = {
         exclude: /node_modules/,
         use: 'babel-loader',
       },
+      {
+        test: /\.mp3$/,
+        type: 'asset/resource',
+      },
     ],
   },
   plugins: [
