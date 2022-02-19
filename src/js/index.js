@@ -1,5 +1,6 @@
 import '../scss/main.scss';
 import { layoutSwitch } from './changeLayout';
-import { currentTheme } from './changeTheme';
+import { setNextTheme } from './changeTheme';
 
 layoutSwitch();
+setNextTheme();
