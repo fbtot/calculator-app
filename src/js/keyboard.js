@@ -1,3 +1,4 @@
+import { keyboardShortcutObj } from './keyboardObj';
 import { selectRandomElement } from './utils';
 import soundOne from '../buttonsAudio/01.mp3';
 import soundTwo from '../buttonsAudio/02.mp3';
@@ -22,5 +23,31 @@ function playSoundButton() {
   const buttonSound = new Audio(selectRandomElement(buttonSounds));
   buttonSound.play();
 }
+
+function keyboardShortcuts() {
+  window.addEventListener('keydown', (e) => {
+    if (e.key in keyboardShortcutObj) {
+      const idKey = keyboardShortcutObj[e.key].id;
+      addActiveButtonClass(idKey);
+      playSoundButton();
+    }
+  });
+  window.addEventListener('keyup', (e) => {
+    if (e.key in keyboardShortcutObj) {
+      const idKey = keyboardShortcutObj[e.key].id;
+      setTimeout(() => removeActiveButtonClass(idKey), 300);
+    }
+  });
+}
+
+function addActiveButtonClass(id) {
+  document.getElementById(id).classList.add('buttonActive');
+}
+
+function removeActiveButtonClass(id) {
+  document.getElementById(id).classList.remove('buttonActive');
+}
+
+keyboardShortcuts();
 
 export { buttonSoundEffects };
