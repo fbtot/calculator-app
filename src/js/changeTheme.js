@@ -2,6 +2,7 @@ import { nextElement } from './utils';
 
 const bodyEl = document.getElementsByTagName('body')[0];
 const themeTitle = document.getElementById('themeTitle');
+const themeSwitches = document.getElementsByClassName('header__theme__radio');
 const themesArray = ['dark-theme', 'light-theme', 'twilight-theme'];
 
 function addtoArr(elementToAdd) {
@@ -25,4 +26,20 @@ function setNextTheme() {
   });
 }
 
-export { addtoArr, getCurrentTheme, setNextTheme };
+function setTheme(themeName) {
+  bodyEl.classList.replace(getCurrentTheme(), themeName);
+}
+
+function setSelectedTheme() {
+  Array.from(themeSwitches).forEach((switchEl) => {
+    switchEl.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetTheme = switchEl.getAttribute('data-theme');
+      setTheme(targetTheme);
+    });
+  });
+}
+
+export {
+  addtoArr, getCurrentTheme, setNextTheme, setSelectedTheme,
+};
