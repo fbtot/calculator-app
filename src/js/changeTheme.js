@@ -1,4 +1,5 @@
-const themesArray = ['datk-theme', 'light-theme', 'twilight-theme'];
+const bodyEl = document.getElementsByClassName('body')[0];
+const themesArray = ['dark-theme', 'light-theme', 'twilight-theme'];
 
 function addtoArr(elementToAdd) {
   return [...themesArray, elementToAdd];
@@ -11,4 +12,8 @@ function addtoArr(elementToAdd) {
  * impostare il tema successivo come array
  */
 
-export { addtoArr };
+function getCurrentTheme() {
+  return themesArray.filter((className) => bodyEl.classList.contains(className)).join();
+}
+
+export { addtoArr, getCurrentTheme };
