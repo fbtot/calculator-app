@@ -8,4 +8,10 @@ function nextElement(target, arr) {
   return '';
 }
 
-export { nextElement };
+function selectRandomElement(arr) {
+  const randomIndex = Math.floor(Math.random() * arr.length);
+
+  return arr[randomIndex];
+}
+
+export { nextElement, selectRandomElement };
