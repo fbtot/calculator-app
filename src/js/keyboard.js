@@ -1,13 +1,13 @@
 import { selectRandomElement } from './utils';
-import one from '../buttonsAudio/01.mp3';
-import two from '../buttonsAudio/02.mp3';
-import three from '../buttonsAudio/03.mp3';
-import four from '../buttonsAudio/04.mp3';
-import five from '../buttonsAudio/05.mp3';
+import soundOne from '../buttonsAudio/01.mp3';
+import soundTwo from '../buttonsAudio/02.mp3';
+import soundThree from '../buttonsAudio/03.mp3';
+import soundFour from '../buttonsAudio/04.mp3';
+import soundFive from '../buttonsAudio/05.mp3';
 
 const buttons = document.getElementsByClassName('button');
 const buttonSounds = [
-  one, two, three, four, five,
+  soundOne, soundTwo, soundThree, soundFour, soundFive,
 ];
 
 function buttonSoundEffects() {
