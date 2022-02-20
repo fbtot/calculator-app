@@ -1,5 +1,5 @@
 // TODO: le funzionalità dei tasti per quanto riguarda MathJS è meglio farle con dei metidi. Forse ancora meglio usare una classe
-buttonObj = {
+const buttonObj = {
   openParenthesis: {
     mathjs: '(',
     scientific: true,
@@ -251,3 +251,4 @@ buttonObj = {
     display: '',
   },
 };
+export { buttonObj };

@@ -1,4 +1,5 @@
 import { playSoundButton } from './buttonSounds';
+import { displayContent } from './display';
 import { keyboardShortcutObj } from './keyboardObj';
 
 function keyboardShortcuts() {
@@ -7,6 +8,8 @@ function keyboardShortcuts() {
       const idKey = keyboardShortcutObj[e.key].id;
       addActiveButtonClass(idKey);
       playSoundButton();
+      displayContent(idKey);
+      console.log(idKey);
     }
   });
 
