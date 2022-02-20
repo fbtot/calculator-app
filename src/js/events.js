@@ -1,7 +1,8 @@
-import { playSoundButton } from './buttonSounds';
+import playSoundButton from './buttonSounds';
 import { addActiveButtonClass, removeActiveButtonClass } from './keyboard';
 import keyboardShortcutObj from './keyboardObj';
 
+const buttons = document.getElementsByClassName('button');
 function pressKey() {
   window.addEventListener('keydown', (e) => {
     if (e.key in keyboardShortcutObj) {
@@ -20,7 +21,11 @@ function pressKey() {
 }
 
 function clickKey() {
-
+  Array.from(buttons).forEach((button) => {
+    button.addEventListener('click', () => {
+      playSoundButton();
+    });
+  });
 }
 
 export { pressKey, clickKey };
