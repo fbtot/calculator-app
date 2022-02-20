@@ -9,7 +9,6 @@ function keyboardShortcuts() {
       addActiveButtonClass(idKey);
       playSoundButton();
       displayContent(idKey);
-      console.log(idKey);
     }
   });
 
