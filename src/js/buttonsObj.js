@@ -1,4 +1,3 @@
-// TODO: le funzionalità dei tasti per quanto riguarda MathJS è meglio farle con dei metidi. Forse ancora meglio usare una classe
 const buttonObj = {
   openParenthesis: {
     mathjs: '(',
@@ -251,4 +250,4 @@ const buttonObj = {
     display: '',
   },
 };
-export { buttonObj };
+export default buttonObj;

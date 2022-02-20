@@ -1,11 +1,10 @@
 import '../scss/main.scss';
 import { layoutSwitch } from './changeLayout';
 import { setNextTheme, setSelectedTheme } from './changeTheme';
-import { buttonSoundEffects } from './buttonSounds';
-import { keyboardShortcuts } from './keyboard';
+import { pressKey, clickKey } from './events';
 
 layoutSwitch();
 setNextTheme();
 setSelectedTheme();
-buttonSoundEffects();
-keyboardShortcuts();
+pressKey();
+clickKey();

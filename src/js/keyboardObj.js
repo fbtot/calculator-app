@@ -53,4 +53,4 @@ const keyboardShortcutObj = {
 
 };
 
-export { keyboardShortcutObj };
+export default keyboardShortcutObj;
