@@ -31,7 +31,7 @@ function clickKey() {
     button.addEventListener('click', (e) => {
       const idKey = e.target.closest('.button').id;
       console.log(idKey);
-      console.log(calculatorObj.operationArr);
+      console.log(calculatorObj);
       playSoundButton();
 
       switch (idKey) {
@@ -50,9 +50,22 @@ function clickKey() {
           updateDisplay();
           break;
         }
+        case 'plus':
+        case 'minus':
+        case 'multiply':
+        case 'divide': {
+          if (calculatorObj.state === 'stop') {
+            const operationArrLength = calculatorObj.operationArr.length;
+            calculatorObj.operationArr.splice(0, operationArrLength, calculatorObj.result());
+          }
+          calculatorObj.state = 'running';
+          addToOperations(idKey);
+          updateDisplay();
+          break;
+        }
 
         default:
-          if (calculatorObj.state == 'stop') resetAll();
+          if (calculatorObj.state === 'stop') resetAll();
           calculatorObj.state = 'running';
           addToOperations(idKey);
           updateDisplay();
