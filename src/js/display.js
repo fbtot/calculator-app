@@ -12,9 +12,13 @@ function replaceDisplayContent(id) {
 }
 
 function updateDisplay(string) {
-  if (string) displayContentEl.innerText = string;
+  if (string) displayContentEl.innerText = formatString(string);
   else if (calculatorObj.operationArr.length === 0) displayContentEl.innerText = 0;
-  else displayContentEl.innerText = calculatorObj.operationArr.join('');
+  else displayContentEl.innerText = formatString(calculatorObj.operationArr.join(''));
+}
+
+function formatString(string) {
+  return String(string).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 export { addDisplayContent, replaceDisplayContent, updateDisplay };
