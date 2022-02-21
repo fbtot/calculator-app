@@ -50,56 +50,19 @@ $arrowAnimationTranslate: 0.2rem;
 
 .display {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
+  padding: 0.8rem;
   margin-bottom: 0.8rem;
-  height: 4rem;
+  min-height: 4rem;
   background-color: var(--screen-background);
   color: var(--text-color-2);
-  text-align: right;
-}
-
-.display__arrow--left,
-.display__arrow--right {
-  display: flex; // it centers the arrows vertically
-  cursor: pointer;
-  pointer-events: visible;
-  visibility: hidden;
-
-  &.active {
-    visibility: visible;
-    animation-name: arrowLeft;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-  }
-}
-
-.display__arrow--right {
-  justify-self: right;
-
-  &.active {
-    @include arrowAnimation(arrowRight);
-  }
-}
-
-.display__arrow--left {
-  &.active {
-    @include arrowAnimation(arrowLeft);
-  }
-}
-
-.display__content-container {
-  width: 100%;
-  text-align: right;
-  font-size: 1.5rem;
-  overflow: hidden;
-  padding: 3px;
-  position: relative;
-  height: 60px;
-  margin-left: auto;
 }
 
 .display__content {
-  position: absolute;
-  right: 0;
-  top: 0.25rem;
+  margin-top: 0.3rem;
+  text-align: right;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  line-break: anywhere;
 }
