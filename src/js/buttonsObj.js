@@ -1,3 +1,5 @@
+import { openFunction } from './doTheMath';
+
 const buttonObj = {
   openParenthesis: {
     mathjs: '(',
@@ -105,7 +107,7 @@ const buttonObj = {
     display: '-',
   },
   squareRoot: {
-    mathjs: '',
+    mathjs: openFunction('sqrt'),
     scientific: true,
     display: '',
   },

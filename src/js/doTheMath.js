@@ -5,10 +5,14 @@ const calculatorObj = {
   operationArr: [],
   result() { return mathjs.evaluate(this.operationArr.join('')); },
   state: 'stop',
+  function: false,
+  depthIndex: 0,
 };
 
 function addToOperations(id) {
-  calculatorObj.operationArr.push(buttonsObj[id].mathjs);
+  if (calculatorObj.operationArr !== '') {
+    calculatorObj.operationArr.push(buttonsObj[id].mathjs);
+  }
 }
 
 function removeFromOperations() {
@@ -24,6 +28,11 @@ function resetAll() {
   calculatorObj.state = 'stop';
 }
 
+function openFunction(name) {
+  calculatorObj.function = true;
+  return `${name}(`;
+}
+
 export {
-  calculatorObj, addToOperations, removeFromOperations, resetAll,
+  calculatorObj, addToOperations, removeFromOperations, resetAll, openFunction,
 };
