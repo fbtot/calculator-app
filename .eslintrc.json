@@ -1,8 +1,7 @@
 {
     "env": {
         "browser": true,
-        "es2021": true,
-        "jest": true
+        "es2021": true
     },
     "extends": [
         "airbnb-base"
@@ -13,7 +12,8 @@
     },
     "rules": {
         "no-use-before-define": "off",
-        "import/prefer-default-export": "off"
+        "import/prefer-default-export": "off",
+        "import/no-unresolved": "off"
     },
     "plugins": ["jest"]
 }
