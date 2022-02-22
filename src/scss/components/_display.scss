@@ -68,6 +68,9 @@ $arrowAnimationTranslate: 0.2rem;
 }
 
 @mixin backgroundHighlight($class, $levels, $i: 1) {
+  @if ($i > 3) {
+    $i: 1;
+  }
   @if ($levels >= 1) {
     .#{$class} {
       color: var(--highlight-#{$i});
@@ -76,7 +79,7 @@ $arrowAnimationTranslate: 0.2rem;
   }
 }
 
-@include backgroundHighlight(highlight--bg, 6);
+@include backgroundHighlight(highlight--bg, 15);
 
 .highlight--bg {
   padding: 0.2rem;
