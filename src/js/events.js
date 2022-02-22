@@ -13,8 +13,6 @@ function pressKey() {
       const idKey = keyboardShortcutObj[e.key].id;
       addActiveButtonClass(idKey);
       playSoundButton();
-      addToOperations(idKey);
-      updateDisplay();
     }
   });
 
