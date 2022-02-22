@@ -51,6 +51,12 @@ const keyboardShortcutObj = {
     id: 'equal',
   },
 
+  '(': {
+    id: 'openParenthesis',
+  },
+  ')': {
+    id: 'closeParenthesis',
+  },
 };
 
 export default keyboardShortcutObj;
