@@ -17,8 +17,11 @@ function updateDisplay(string) {
   else displayContentEl.innerText = formatString(calculatorObj.operationArr.join(''));
 }
 
+// TODO: la regex non va bene, mostra la dvisione tra le migliaia anche dopo la virgola.
 function formatString(string) {
   return String(string).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
 
 export { addDisplayContent, replaceDisplayContent, updateDisplay };
+
+// TODO: trovare un modo per evidenziare i numeri tra parentesi.
