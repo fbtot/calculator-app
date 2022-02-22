@@ -1,4 +1,4 @@
-import * as mathjs from 'mathjs';
+import { mathjs } from './vendor';
 import buttonsObj from './buttonsObj';
 
 const calculatorObj = {

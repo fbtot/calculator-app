@@ -8,7 +8,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   mode,
   entry: {
-    // vendor: './src/js/vendor.js',
+    vendor: { import: './src/js/vendor.js' },
     main: {
       import: './src/js/index.js',
     },
