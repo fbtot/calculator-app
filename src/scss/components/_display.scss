@@ -1,53 +1,5 @@
 @use '../index.scss' as *;
 
-// @keyframes arrowLeft {
-//   0% {
-//     opacity: 100%;
-//     transform: translateX(0rem);
-//   }
-//   80% {
-//     opacity: 100%;
-//     transform: translateX(0rem);
-//   }
-//   100% {
-//     transform: translateX(-0.2rem);
-//     opacity: 0;
-//   }
-// }
-
-@mixin arrowAnimationKeyframes($animationName, $midpoint, $translate) {
-  @keyframes #{$animationName} {
-    0% {
-      opacity: 100%;
-      transform: translateX(0rem);
-    }
-    #{$midpoint} {
-      opacity: 100%;
-      transform: translateX(0rem);
-    }
-    100% {
-      transform: translateX($translate);
-      opacity: 0;
-    }
-  }
-}
-
-@mixin arrowAnimation($animationName) {
-  animation-name: $animationName;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-
-  // I don't use the hhover state on the arrows itself because it leats to asynchronous animations.
-  // When the hover is on the display, both animations start and stop at the same time.
-  .display:hover & {
-    animation: none;
-  }
-}
-
-$arrowAnimationTranslate: 0.2rem;
-@include arrowAnimationKeyframes(arrowLeft, 80%, $arrowAnimationTranslate * -1);
-@include arrowAnimationKeyframes(arrowRight, 80%, $arrowAnimationTranslate);
-
 .display {
   display: flex;
   justify-content: flex-end;
