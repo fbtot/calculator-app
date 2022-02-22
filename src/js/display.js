@@ -1,4 +1,4 @@
-import buttonObj from './buttonsObj';
+import { buttonObj } from './buttonsObj';
 import { calculatorObj } from './doTheMath';
 
 const displayContentEl = document.getElementById('displayContent');
@@ -26,5 +26,3 @@ function formatString(string) {
 }
 
 export { addDisplayContent, replaceDisplayContent, updateDisplay };
-
-// TODO: trovare un modo per evidenziare i numeri tra parentesi.
