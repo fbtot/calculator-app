@@ -1,5 +1,3 @@
-// @use "./vendors/" as *
-
 @use './base/html' as *;
 
 @use './components/buttons';
@@ -9,4 +7,3 @@
 
 @use './layout/calculator-layout';
 @use './layout/header';
-// @use "./themes/" as * ;
