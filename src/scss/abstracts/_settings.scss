@@ -55,6 +55,13 @@ $very-small-layout: 400px;
     --key-shadow: var(--orange-D-450);
     --key-light: hsla(52, 100%, 92%, 0.7);
 
+    --highlight-1: var(--desaturated-blue-300);
+    --highlight-2: var(--red-500);
+    --highlight-3: var(--desaturated-blue-100);
+    --highlight-4: var(--desaturated-blue-300);
+    --highlight-5: var(--red-500);
+    --highlight-6: var(--desaturated-blue-100);
+
     /* ····················· § TEXT ··· */
     --text-color: var(--desaturated-blue-D-700);
     --text-color-2: white;
@@ -105,12 +112,20 @@ $very-small-layout: 400px;
     --key-shadow: var(--orange-D-400);
     --key-light: hsla(52, 100%, 92%, 0.7);
 
-    /* ····················· § TEXT ··· */
+    /* ····················· § TEXT .··· */
     --text-color: var(--yellow-D-200);
     --text-color-2: black;
     --text-color-3: var(--orange-600);
     --text-color-4: var(--red-D-200);
+
+    --highlight-1: var(--cyan-600);
+    --highlight-2: var(--orange-600);
+    --highlight-3: var(--cyan-350);
+    --highlight-4: var(--cyan-600);
+    --highlight-5: var(--orange-600);
+    --highlight-6: var(--cyan-350);
   }
+
   /* =================================== § TWILIGHT THEME === */
   --violet-900: hsl(268, 75%, 9%);
   --violet-950: hsl(268, 71%, 12%);
@@ -161,6 +176,13 @@ $very-small-layout: 400px;
     --text-color-2: white;
     --text-color-3: var(--cyan-S-550);
     --text-color-4: var(--violet-950);
+
+    --highlight-1: var(--violet-870);
+    --highlight-2: var(--yellow-400);
+    --highlight-3: var(--violet-500);
+    --highlight-4: var(--violet-870);
+    --highlight-5: var(--yellow-400);
+    --highlight-6: var(--violet-500);
   }
 
   // Typography

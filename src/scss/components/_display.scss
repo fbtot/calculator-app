@@ -63,6 +63,22 @@ $arrowAnimationTranslate: 0.2rem;
   margin-top: 0.3rem;
   text-align: right;
   font-size: 1.5rem;
-  line-height: 1.8rem;
+  line-height: 2.3rem;
   line-break: anywhere;
+}
+
+@mixin backgroundHighlight($class, $levels, $i: 1) {
+  @if ($levels >= 1) {
+    .#{$class} {
+      color: var(--highlight-#{$i});
+      @include backgroundHighlight($class, $levels - 1, $i + 1);
+    }
+  }
+}
+
+@include backgroundHighlight(highlight--bg, 6);
+
+.highlight--bg {
+  padding: 0.2rem;
+  border-radius: 0.2rem;
 }
