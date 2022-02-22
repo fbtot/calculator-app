@@ -1,5 +1,5 @@
 import { mathjs } from './vendor';
-import buttonsObj from './buttonsObj';
+import { buttonObj } from './buttonsObj';
 
 const calculatorObj = {
   operationArr: [],
@@ -11,7 +11,7 @@ const calculatorObj = {
 
 function addToOperations(id) {
   if (calculatorObj.operationArr !== '') {
-    calculatorObj.operationArr.push(buttonsObj[id].mathjs);
+    calculatorObj.operationArr.push(buttonObj[id].mathjs);
   }
 }
 
@@ -28,11 +28,6 @@ function resetAll() {
   calculatorObj.state = 'stop';
 }
 
-function openFunction(name) {
-  calculatorObj.function = true;
-  return `${name}(`;
-}
-
 export {
-  calculatorObj, addToOperations, removeFromOperations, resetAll, openFunction,
+  calculatorObj, addToOperations, removeFromOperations, resetAll,
 };

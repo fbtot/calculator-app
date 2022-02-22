@@ -1,4 +1,9 @@
-import { openFunction } from './doTheMath';
+// import { calculatorObj } from './doTheMath';
+
+function openFunction(name) {
+  // calculatorObj.function = true;
+  return `${name}(`;
+}
 
 const buttonObj = {
   openParenthesis: {
@@ -252,4 +257,5 @@ const buttonObj = {
     display: '',
   },
 };
-export default buttonObj;
+
+export { buttonObj };
