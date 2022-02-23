@@ -100,44 +100,15 @@
   color: white;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  15% {
-    transform: scale(1.1);
-  }
-
-  30% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
+// prettier-ignore
 @keyframes shake {
-  0% {
-    transform: translateY(0);
-  }
-  5% {
-    transform: translateX(-5px);
-  }
-  10% {
-    transform: translateX(5px);
-  }
-  15% {
-    transform: translateX(-5px);
-  }
-  20% {
-    transform: translateX(5px);
-  }
-  25% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(0);
-  }
+  0% {transform: translateY(0);}
+  5% {transform: translateX(-5px); }
+  10% {transform: translateX(5px); }
+  15% {transform: translateX(-5px); }
+  20% {transform: translateX(5px); }
+  25% {transform: translateX(0); }
+  100% {transform: translateX(0); }
 }
 
 .button--highlight--bold {
