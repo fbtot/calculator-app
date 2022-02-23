@@ -17,10 +17,9 @@ function updateDisplay(string) {
   else displayContentEl.innerHTML = formatString(calculatorObj.operationArr.join(''));
 }
 
-// TODO: la regex non va bene, mostra la dvisione tra le migliaia anche dopo la virgola.
 function formatString(string) {
   return String(string)
-    .replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+    .replaceAll(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
     .replaceAll('(', '<span class="highlight--bg">(')
     .replaceAll(')', ')</span>');
 }
