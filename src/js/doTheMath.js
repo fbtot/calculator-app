@@ -1,9 +1,9 @@
-import { mathjs } from './vendor';
+import { evaluate } from './vendor';
 import { buttonObj } from './buttonsObj';
 
 const calculatorObj = {
   operationArr: [],
-  result() { return mathjs.evaluate(this.operationArr.join('')); },
+  result() { return evaluate(this.operationArr.join('')); },
   state: 'stop',
   function: false,
   depthIndex: 0,

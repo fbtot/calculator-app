@@ -1,6 +1,39 @@
 import '../css/normalize.css';
-import { create, all } from 'mathjs/number';
+import {
+  create,
+  sqrtDependencies,
+  evaluateDependencies,
+  invDependencies,
+  sinDependencies,
+  cosDependencies,
+  tanDependencies,
+  addDependencies,
+  subtractDependencies,
+  multiplyDependencies,
+  divideDependencies,
+  powDependencies,
+  factorialDependencies,
+  logDependencies,
+  piDependencies,
+  eDependencies,
+} from 'mathjs';
 
-const mathjs = create(all);
+const { evaluate } = create({
+  sqrtDependencies,
+  evaluateDependencies,
+  invDependencies,
+  sinDependencies,
+  cosDependencies,
+  tanDependencies,
+  addDependencies,
+  subtractDependencies,
+  multiplyDependencies,
+  divideDependencies,
+  powDependencies,
+  factorialDependencies,
+  logDependencies,
+  piDependencies,
+  eDependencies,
+});
 
-export { mathjs };
+export { evaluate };
