@@ -3,7 +3,7 @@ import { updateDisplay } from './display';
 import {
   addToOperations, calculatorObj, removeFromOperations, resetAll,
 } from './doTheMath';
-import { addActiveButtonClass, removeActiveButtonClass } from './keyboard';
+import { addActiveButtonClass, removeActiveButtonClass, toggleSecondFunctions } from './keyboard';
 import keyboardShortcutObj from './keyboardObj';
 
 const buttons = document.getElementsByClassName('button');
@@ -59,6 +59,10 @@ function clickKey() {
           calculatorObj.state = 'running';
           addToOperations(idKey);
           updateDisplay();
+          break;
+        }
+        case 'secondFunction': {
+          toggleSecondFunctions();
           break;
         }
 

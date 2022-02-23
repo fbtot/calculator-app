@@ -7,12 +7,9 @@ function removeActiveButtonClass(id) {
 }
 
 function toggleSecondFunctions() {
-  const secondFunctionBtn = document.getElementById('secondFunction');
   const buttonsContainer = document.getElementById('buttonsContainer');
 
-  secondFunctionBtn.addEventListener('click', () => {
-    buttonsContainer.classList.toggle('second-function');
-  });
+  buttonsContainer.classList.toggle('second-function');
 }
 
 export { addActiveButtonClass, removeActiveButtonClass, toggleSecondFunctions };
