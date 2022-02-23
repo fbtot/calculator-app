@@ -50,12 +50,20 @@ const keyboardShortcutObj = {
   Enter: {
     id: 'equal',
   },
-
   '(': {
     id: 'openParenthesis',
   },
   ')': {
     id: 'closeParenthesis',
+  },
+  '^': {
+    id: 'powerOfY',
+  },
+  '%': {
+    id: 'percentage',
+  },
+  '!': {
+    id: 'factorial',
   },
 };
 
