@@ -16,7 +16,25 @@ import {
   logDependencies,
   piDependencies,
   eDependencies,
+  cbrtDependencies,
+  sinhDependencies,
+  coshDependencies,
+  tanhDependencies,
+  randomDependencies,
+  log10Dependencies,
+  asinDependencies,
+  acosDependencies,
+  atanDependencies,
+  asinhDependencies,
+  acoshDependencies,
+  atanhDependencies,
+
 } from 'mathjs';
+
+const config = {
+  angles: 'deg',
+
+};
 
 const { evaluate } = create({
   sqrtDependencies,
@@ -34,6 +52,18 @@ const { evaluate } = create({
   logDependencies,
   piDependencies,
   eDependencies,
-});
+  cbrtDependencies,
+  sinhDependencies,
+  coshDependencies,
+  tanhDependencies,
+  randomDependencies,
+  log10Dependencies,
+  asinDependencies,
+  acosDependencies,
+  atanDependencies,
+  asinhDependencies,
+  acoshDependencies,
+  atanhDependencies,
+}, config);
 
 export { evaluate };

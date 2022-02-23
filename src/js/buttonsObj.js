@@ -88,12 +88,12 @@ const buttonObj = {
     display: '',
   },
   eToX: {
-    mathjs: '',
+    mathjs: 'e^',
     scientific: true,
     display: '',
   },
   tenX: {
-    mathjs: '',
+    mathjs: '10^',
     scientific: true,
     display: '',
   },
@@ -146,7 +146,7 @@ const buttonObj = {
   /* TODO: dato che in mathjs la base del logaritmo va sempre specificata,
   non seve assegnare più di un tasto ai logaritmi */
   logTen: {
-    mathjs: '',
+    mathjs: openFunction('log10'),
     scientific: true,
     display: '',
   },
@@ -186,7 +186,22 @@ const buttonObj = {
     display: '',
   },
   tan: {
-    mathjs: openFunction('cos'),
+    mathjs: openFunction('tan'),
+    scientific: true,
+    display: '',
+  },
+  asin: {
+    mathjs: openFunction('asin'),
+    scientific: true,
+    display: '',
+  },
+  acos: {
+    mathjs: openFunction('acos'),
+    scientific: true,
+    display: '',
+  },
+  atan: {
+    mathjs: openFunction('atan'),
     scientific: true,
     display: '',
   },
@@ -241,6 +256,21 @@ const buttonObj = {
   },
   tanh: {
     mathjs: openFunction('tanh'),
+    scientific: true,
+    display: '',
+  },
+  asinh: {
+    mathjs: openFunction('asinh'),
+    scientific: true,
+    display: '',
+  },
+  acosh: {
+    mathjs: openFunction('acosh'),
+    scientific: true,
+    display: '',
+  },
+  atanh: {
+    mathjs: openFunction('atanh'),
     scientific: true,
     display: '',
   },
