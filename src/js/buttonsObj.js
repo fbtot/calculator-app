@@ -5,6 +5,17 @@ function openFunction(name) {
   return `${name}(`;
 }
 
+function openFunctionAngles(name, deg = false) {
+  if (deg) {
+    return `${name}(`;
+  }
+  return `${name}(`;
+}
+
+function openCloseFunction(name) {
+  return `${name}()`;
+}
+
 const buttonObj = {
   openParenthesis: {
     mathjs: '(',
@@ -72,7 +83,7 @@ const buttonObj = {
     display: '',
   },
   powerOfY: {
-    mathjs: '',
+    mathjs: '^',
     scientific: true,
     display: '',
   },
@@ -107,7 +118,7 @@ const buttonObj = {
     display: '+',
   },
   inverse: {
-    mathjs: '',
+    mathjs: openFunction('inv'),
     scientific: true,
     display: '-',
   },
@@ -117,20 +128,23 @@ const buttonObj = {
     display: '',
   },
   cubicRoot: {
-    mathjs: '',
+    mathjs: openFunction('cbrt'),
     scientific: true,
     display: '',
   },
+  // TODO: aggiungere tooltip che spiegano il funzionamento di verti tasti
   yRoot: {
-    mathjs: '',
+    mathjs: openFunction('nthRoot'),
     scientific: true,
     display: '',
   },
   in: {
-    mathjs: '',
+    mathjs: openFunction('log'),
     scientific: true,
     display: '',
   },
+  /* TODO: dato che in mathjs la base del logaritmo va sempre specificata,
+  non seve assegnare più di un tasto ai logaritmi */
   logTen: {
     mathjs: '',
     scientific: true,
@@ -162,25 +176,26 @@ const buttonObj = {
     display: '',
   },
   sin: {
-    mathjs: '',
+    mathjs: openFunction('sin'),
     scientific: true,
     display: '',
   },
   cos: {
-    mathjs: '',
+    mathjs: openFunction('cos'),
     scientific: true,
     display: '',
   },
   tan: {
-    mathjs: '',
+    mathjs: openFunction('cos'),
     scientific: true,
     display: '',
   },
   eulersNumber: {
-    mathjs: '',
+    mathjs: 'e',
     scientific: true,
     display: '',
   },
+  // TODO: si potrebbe togliere
   exponentialNotation: {
     mathjs: '',
     scientific: true,
@@ -206,38 +221,41 @@ const buttonObj = {
     scientific: false,
     display: '*',
   },
+
+  // TODO: si potrebbe togliere
   radial: {
     mathjs: '',
     scientific: true,
+    value: false,
     display: '',
   },
   sinh: {
-    mathjs: '',
+    mathjs: openFunction('sinh'),
     scientific: true,
     display: '',
   },
   cosh: {
-    mathjs: '',
+    mathjs: openFunction('cosh'),
     scientific: true,
     display: '',
   },
   tanh: {
-    mathjs: '',
+    mathjs: openFunction('tanh'),
     scientific: true,
     display: '',
   },
   pi: {
-    mathjs: '',
+    mathjs: 'pi',
     scientific: true,
     display: '',
   },
   random: {
-    mathjs: '',
+    mathjs: openCloseFunction('random'),
     scientific: true,
     display: '',
   },
   percentage: {
-    mathjs: '',
+    mathjs: '%',
     scientific: true,
     display: '',
   },
@@ -252,7 +270,7 @@ const buttonObj = {
     display: '',
   },
   equal: {
-    mathjs: '',
+    mathjs: '(-)',
     scientific: false,
     display: '',
   },
