@@ -56,6 +56,20 @@
   }
 }
 
+.button--second {
+  display: none;
+}
+
+.second-function {
+  .button--second {
+    display: initial;
+  }
+
+  .button--first {
+    display: none;
+  }
+}
+
 .normal-layout {
   .button--scientific-layout {
     display: none;
@@ -177,8 +191,11 @@
   #minus                {grid-area: minus}
   #factorial            {grid-area: factorial}
   #sin                  {grid-area: sin}
+  #asin                 {grid-area: sin}
   #cos                  {grid-area: cos}
+  #acos                 {grid-area: cos}
   #tan                  {grid-area: tan}
+  #atan                 {grid-area: tan}
   #eulersNumber         {grid-area: eulersNumber}
   #exponentialNotation  {grid-area: exponentialNotation}
   #comma                {grid-area: comma}
@@ -187,8 +204,11 @@
   #multiply             {grid-area: multiply}
   #radial               {grid-area: radial}
   #sinh                 {grid-area: sinh}
+  #asinh                {grid-area: sinh}
   #cosh                 {grid-area: cosh}
+  #acosh                {grid-area: cosh}
   #tanh                 {grid-area: tanh}
+  #atanh                {grid-area: tanh}
   #pi                   {grid-area: pi}
   #random               {grid-area: random}
   #percentage           {grid-area: percentage}

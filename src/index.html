@@ -57,7 +57,7 @@
         <!-- ============================================ -->
         <!-- ··········································· § BUTTONS ··· -->
         <!-- ======================================== -->
-        <div class="buttons-container">
+        <div id="buttonsContainer" class="buttons-container">
           <button class="button button--scientific-layout button--accent--pale" id="openParenthesis">
             <span class="button__content--small">(</span>
           </button>
@@ -151,14 +151,23 @@
           <button class="button button--scientific-layout button--accent--pale" id="factorial">
             <span class="button__content">$x!$</span>
           </button>
-          <button class="button button--scientific-layout button--accent--pale" id="sin">
+          <button class="button button--scientific-layout button--accent--pale button--first" id="sin">
             <span class="button__content--small">sin</span>
           </button>
-          <button class="button button--scientific-layout button--accent--pale" id="cos">
+          <button class="button button--scientific-layout button--accent--pale button--second" id="asin">
+            <span class="button__content--small">sin<sup>-1</sup></span>
+          </button>
+          <button class="button button--scientific-layout button--accent--pale button--first" id="cos">
             <span class="button__content--small">cos</span>
           </button>
-          <button class="button button--scientific-layout button--accent--pale" id="tan">
+          <button class="button button--scientific-layout button--accent--pale button--second" id="acos">
+            <span class="button__content--small">cos<sup>-1</sup></span>
+          </button>
+          <button class="button button--scientific-layout button--accent--pale button--first" id="tan">
             <span class="button__content--small">tan</span>
+          </button>
+          <button class="button button--scientific-layout button--accent--pale button--second" id="atan">
+            <span class="button__content--small">tan<sup>-1</sup></span>
           </button>
           <button class="button button--scientific-layout button--accent--pale" id="eulersNumber">
             <span class="button__content">$e$</span>
@@ -181,14 +190,23 @@
           <button class="button button--scientific-layout button--accent--pale" id="radial">
             <span class="button__content--small">Rad</span>
           </button>
-          <button class="button button--scientific-layout button--accent--pale" id="sinh">
+          <button class="button button--scientific-layout button--accent--pale button--first" id="sinh">
             <span class="button__content--small">sinh</span>
           </button>
-          <button class="button button--scientific-layout button--accent--pale" id="cosh">
+          <button class="button button--scientific-layout button--accent--pale button--second" id="asinh">
+            <span class="button__content--small">sinh<sup>-1</sup></span>
+          </button>
+          <button class="button button--scientific-layout button--accent--pale button--first" id="cosh">
             <span class="button__content--small">cosh</span>
           </button>
-          <button class="button button--scientific-layout button--accent--pale" id="tanh">
+          <button class="button button--scientific-layout button--accent--pale button--second" id="acosh">
+            <span class="button__content--small">cosh<sup>-1</sup></span>
+          </button>
+          <button class="button button--scientific-layout button--accent--pale button--first" id="tanh">
             <span class="button__content--small">tanh</span>
+          </button>
+          <button class="button button--scientific-layout button--accent--pale button--second" id="atanh">
+            <span class="button__content--small">tanh<sup>-1</sup></span>
           </button>
           <button class="button button--scientific-layout button--accent--pale" id="pi">
             <span class="button__content">$\pi$</span>
