@@ -8,7 +8,10 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
   mode,
   entry: {
-    vendor: './src/js/vendor.js',
+    vendor: {
+      import: './src/js/vendor.js',
+      filename: 'vendor.js',
+    },
     main: {
       import: './src/js/index.js',
       dependOn: 'vendor',
@@ -30,7 +33,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: [/node_modules/, /vendor/],
         use: 'babel-loader',
       },
       {
