@@ -1,17 +1,9 @@
-import { evaluate } from './vendor';
 import { buttonObj } from './buttonsObj';
-
-const calculatorObj = {
-  operationArr: [],
-  result() { return evaluate(this.operationArr.join('')); },
-  state: 'stop',
-  function: false,
-  depthIndex: 0,
-};
+import { calculatorObj } from './calculatorObj';
 
 function addToOperations(id) {
   if (calculatorObj.operationArr !== '') {
-    calculatorObj.operationArr.push(buttonObj[id].mathjs);
+    calculatorObj.operationArr.push(buttonObj[id].mathjs());
   }
 }
 
@@ -29,5 +21,5 @@ function resetAll() {
 }
 
 export {
-  calculatorObj, addToOperations, removeFromOperations, resetAll,
+  addToOperations, removeFromOperations, resetAll,
 };

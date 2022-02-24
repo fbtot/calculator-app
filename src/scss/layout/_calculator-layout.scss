@@ -70,6 +70,33 @@
   }
 }
 
+#nextAction {
+  display: none;
+}
+
+.nextAction {
+  #nextAction {
+    display: initial;
+  }
+
+  #equal {
+    display: none;
+  }
+}
+
+#deg {
+  display: none;
+}
+
+.deg {
+  #deg {
+    display: initial;
+  }
+  #radial {
+    display: none;
+  }
+}
+
 .normal-layout {
   .button--scientific-layout {
     display: none;

@@ -1,15 +1,17 @@
-// import { calculatorObj } from './doTheMath';
+import { calculatorObj } from './calculatorObj';
+
+import { addNextActionButton } from './keyboard';
 
 function openFunction(name) {
   // calculatorObj.function = true;
   return `${name}(`;
 }
 
-function openFunctionAngles(name, deg = false) {
-  if (deg) {
-    return `${name}(`;
+function openFunctionAngles(name) {
+  if (calculatorObj.angle === 'deg') {
+    addNextActionButton();
   }
-  return `${name}(`;
+  return openFunction(name);
 }
 
 function openCloseFunction(name) {
@@ -18,289 +20,289 @@ function openCloseFunction(name) {
 
 const buttonObj = {
   openParenthesis: {
-    mathjs: '(',
+    mathjs() { return '('; },
     scientific: true,
     display: '',
   },
   closeParenthesis: {
-    mathjs: ')',
+    mathjs() { return ')'; },
     scientific: true,
     display: '',
   },
   cancelMemory: {
-    mathjs: '',
+    mathjs() { return ''; },
     scientific: true,
     display: '',
   },
   addToMemory: {
-    mathjs: '',
+    mathjs() { return ''; },
     scientific: true,
     display: '',
   },
   subtractFromMemory: {
-    mathjs: '',
+    mathjs() { return ''; },
     scientific: true,
     display: '',
   },
   recallMemory: {
-    mathjs: '',
+    mathjs() { return ''; },
     scientific: true,
     display: '',
   },
   seven: {
-    mathjs: '7',
+    mathjs() { return '7'; },
     scientific: false,
     display: '7',
   },
   eight: {
-    mathjs: '8',
+    mathjs() { return '8'; },
     scientific: false,
     display: '8',
   },
   nine: {
-    mathjs: '9',
+    mathjs() { return '9'; },
     scientific: false,
     display: '9',
   },
   delete: {
-    mathjs: '',
+    mathjs() { return ''; },
     scientific: false,
     display: '',
   },
   secondFunction: {
-    mathjs: '',
+    mathjs() { return ''; },
     scientific: true,
     display: '',
   },
   powerOfTwo: {
-    mathjs: '^2',
+    mathjs() { return '^2'; },
     scientific: true,
     display: '',
   },
   powerOfThree: {
-    mathjs: '^3',
+    mathjs() { return '^3'; },
     scientific: true,
     display: '',
   },
   powerOfY: {
-    mathjs: '^',
+    mathjs() { return '^'; },
     scientific: true,
     display: '',
   },
   eToX: {
-    mathjs: 'e^',
+    mathjs() { return 'e^'; },
     scientific: true,
     display: '',
   },
   tenX: {
-    mathjs: '10^',
+    mathjs() { return '10^'; },
     scientific: true,
     display: '',
   },
   four: {
-    mathjs: '4',
+    mathjs() { return '4'; },
     scientific: false,
     display: '4',
   },
   five: {
-    mathjs: '5',
+    mathjs() { return '5'; },
     scientific: false,
     display: '5',
   },
   six: {
-    mathjs: '6',
+    mathjs() { return '6'; },
     scientific: false,
     display: '6',
   },
   plus: {
-    mathjs: '+',
+    mathjs() { return '+'; },
     scientific: false,
     display: '+',
   },
   inverse: {
-    mathjs: openFunction('inv'),
+    mathjs() { openFunction('inv'); },
     scientific: true,
     display: '-',
   },
   squareRoot: {
-    mathjs: openFunction('sqrt'),
+    mathjs() { return openFunction('sqrt'); },
     scientific: true,
     display: '',
   },
   cubicRoot: {
-    mathjs: openFunction('cbrt'),
+    mathjs() { openFunction('cbrt'); },
     scientific: true,
     display: '',
   },
   // TODO: aggiungere tooltip che spiegano il funzionamento di verti tasti
   yRoot: {
-    mathjs: openFunction('nthRoot'),
+    mathjs() { openFunction('nthRoot'); },
     scientific: true,
     display: '',
   },
   in: {
-    mathjs: openFunction('log'),
+    mathjs() { openFunction('log'); },
     scientific: true,
     display: '',
   },
   /* TODO: dato che in mathjs la base del logaritmo va sempre specificata,
   non seve assegnare più di un tasto ai logaritmi */
   logTen: {
-    mathjs: openFunction('log10'),
+    mathjs() { openFunction('log10'); },
     scientific: true,
     display: '',
   },
   one: {
-    mathjs: '1',
+    mathjs() { return '1'; },
     scientific: false,
     display: '1',
   },
   two: {
-    mathjs: '2',
+    mathjs() { return '2'; },
     scientific: false,
     display: '2',
   },
   three: {
-    mathjs: '3',
+    mathjs() { return '3'; },
     scientific: false,
     display: '3',
   },
   minus: {
-    mathjs: '-',
+    mathjs() { return '-'; },
     scientific: false,
     display: '-',
   },
   factorial: {
-    mathjs: '!',
+    mathjs() { return '!'; },
     scientific: true,
     display: '',
   },
   sin: {
-    mathjs: openFunction('sin'),
+    mathjs() { return openFunctionAngles('sin'); },
     scientific: true,
     display: '',
   },
   cos: {
-    mathjs: openFunction('cos'),
+    mathjs() { openFunctionAngles('cos'); },
     scientific: true,
     display: '',
   },
   tan: {
-    mathjs: openFunction('tan'),
+    mathjs() { openFunctionAngles('tan'); },
     scientific: true,
     display: '',
   },
   asin: {
-    mathjs: openFunction('asin'),
+    mathjs() { openFunctionAngles('asin'); },
     scientific: true,
     display: '',
   },
   acos: {
-    mathjs: openFunction('acos'),
+    mathjs() { openFunctionAngles('acos'); },
     scientific: true,
     display: '',
   },
   atan: {
-    mathjs: openFunction('atan'),
+    mathjs() { openFunctionAngles('atan'); },
     scientific: true,
     display: '',
   },
   eulersNumber: {
-    mathjs: 'e',
+    mathjs() { return 'e'; },
     scientific: true,
     display: '',
   },
   // TODO: si potrebbe togliere
   exponentialNotation: {
-    mathjs: '',
+    mathjs() { return ''; },
     scientific: true,
     display: '',
   },
   comma: {
-    mathjs: '.',
+    mathjs() { return '.'; },
     scientific: false,
     display: '.',
   },
   zero: {
-    mathjs: '0',
+    mathjs() { return '0'; },
     scientific: false,
     display: '0',
   },
   divide: {
-    mathjs: '/',
+    mathjs() { return '/'; },
     scientific: false,
     display: '/',
   },
   multiply: {
-    mathjs: '*',
+    mathjs() { return '*'; },
     scientific: false,
     display: '*',
   },
 
   // TODO: si potrebbe togliere
   radial: {
-    mathjs: '',
+    mathjs() { return ''; },
     scientific: true,
     value: false,
     display: '',
   },
   sinh: {
-    mathjs: openFunction('sinh'),
+    mathjs() { openFunctionAngles('sinh'); },
     scientific: true,
     display: '',
   },
   cosh: {
-    mathjs: openFunction('cosh'),
+    mathjs() { openFunctionAngles('cosh'); },
     scientific: true,
     display: '',
   },
   tanh: {
-    mathjs: openFunction('tanh'),
+    mathjs() { openFunctionAngles('tanh'); },
     scientific: true,
     display: '',
   },
   asinh: {
-    mathjs: openFunction('asinh'),
+    mathjs() { openFunctionAngles('asinh'); },
     scientific: true,
     display: '',
   },
   acosh: {
-    mathjs: openFunction('acosh'),
+    mathjs() { openFunctionAngles('acosh'); },
     scientific: true,
     display: '',
   },
   atanh: {
-    mathjs: openFunction('atanh'),
+    mathjs() { openFunctionAngles('atanh'); },
     scientific: true,
     display: '',
   },
   pi: {
-    mathjs: 'pi',
+    mathjs() { return 'pi'; },
     scientific: true,
     display: '',
   },
   random: {
-    mathjs: openCloseFunction('random'),
+    mathjs() { openCloseFunction('random'); },
     scientific: true,
     display: '',
   },
   percentage: {
-    mathjs: '%',
+    mathjs() { return '%'; },
     scientific: true,
     display: '',
   },
   invertNumber: {
-    mathjs: '',
+    mathjs() { return ''; },
     scientific: true,
     display: '',
   },
   reset: {
-    mathjs: '',
+    mathjs() { return ''; },
     scientific: false,
     display: '',
   },
   equal: {
-    mathjs: '(-)',
+    mathjs() { return '(-)'; },
     scientific: false,
     display: '',
   },

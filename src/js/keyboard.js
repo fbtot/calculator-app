@@ -1,3 +1,5 @@
+const buttonsContainer = document.getElementById('buttonsContainer');
+
 function addActiveButtonClass(id) {
   document.getElementById(id).classList.add('buttonActive');
 }
@@ -7,9 +9,26 @@ function removeActiveButtonClass(id) {
 }
 
 function toggleSecondFunctions() {
-  const buttonsContainer = document.getElementById('buttonsContainer');
-
   buttonsContainer.classList.toggle('second-function');
 }
 
-export { addActiveButtonClass, removeActiveButtonClass, toggleSecondFunctions };
+function toggleRadial() {
+  buttonsContainer.classList.toggle('deg');
+}
+
+function addNextActionButton() {
+  buttonsContainer.classList.add('nextAction');
+}
+
+function removeNextActionButton() {
+  buttonsContainer.classList.remove('nextAction');
+}
+
+export {
+  addActiveButtonClass,
+  removeActiveButtonClass,
+  toggleSecondFunctions,
+  addNextActionButton,
+  removeNextActionButton,
+  toggleRadial,
+};

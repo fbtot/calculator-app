@@ -1,10 +1,13 @@
 import playSoundButton from './buttonSounds';
 import { updateDisplay } from './display';
 import {
-  addToOperations, calculatorObj, removeFromOperations, resetAll,
+  addToOperations, removeFromOperations, resetAll,
 } from './doTheMath';
-import { addActiveButtonClass, removeActiveButtonClass, toggleSecondFunctions } from './keyboard';
+import {
+  addActiveButtonClass, removeActiveButtonClass, toggleSecondFunctions, toggleRadial, removeNextActionButton,
+} from './keyboard';
 import keyboardShortcutObj from './keyboardObj';
+import { calculatorObj } from './calculatorObj';
 
 const buttons = document.getElementsByClassName('button');
 function pressKey() {
@@ -29,7 +32,6 @@ function clickKey() {
     button.addEventListener('click', (e) => {
       const idKey = e.target.closest('.button').id;
       console.log(idKey);
-      console.log(calculatorObj);
       playSoundButton();
 
       switch (idKey) {
@@ -65,13 +67,26 @@ function clickKey() {
           toggleSecondFunctions();
           break;
         }
-
+        case 'radial': {
+          toggleRadial();
+          calculatorObj.angle = 'deg';
+          break;
+        }
+        case 'deg': {
+          toggleRadial();
+          calculatorObj.angle = 'rad';
+          break;
+        }
+        case 'nextAction':
+          removeNextActionButton();
+          break;
         default:
           if (calculatorObj.state === 'stop') resetAll();
           calculatorObj.state = 'running';
           addToOperations(idKey);
           updateDisplay();
       }
+      console.log(calculatorObj);
     });
   });
 }

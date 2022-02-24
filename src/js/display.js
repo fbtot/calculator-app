@@ -1,5 +1,5 @@
 import { buttonObj } from './buttonsObj';
-import { calculatorObj } from './doTheMath';
+import { calculatorObj } from './calculatorObj';
 
 const displayContentEl = document.getElementById('displayContent');
 
