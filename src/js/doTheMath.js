@@ -7,6 +7,12 @@ function addToOperations(id) {
   }
 }
 
+function addStringToOperations(string) {
+  if (string !== '') {
+    calculatorObj.operationArr.push(string);
+  }
+}
+
 function removeFromOperations() {
   calculatorObj.operationArr.pop();
 }
@@ -21,5 +27,5 @@ function resetAll() {
 }
 
 export {
-  addToOperations, removeFromOperations, resetAll,
+  addToOperations, removeFromOperations, resetAll, addStringToOperations,
 };

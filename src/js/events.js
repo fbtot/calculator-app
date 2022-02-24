@@ -1,7 +1,7 @@
 import playSoundButton from './buttonSounds';
 import { updateDisplay } from './display';
 import {
-  addToOperations, removeFromOperations, resetAll,
+  addToOperations, removeFromOperations, resetAll, addStringToOperations,
 } from './doTheMath';
 import {
   addActiveButtonClass,
@@ -14,6 +14,7 @@ import keyboardShortcutObj from './keyboardObj';
 import { calculatorObj } from './calculatorObj';
 
 const buttons = document.getElementsByClassName('button');
+
 function pressKey() {
   window.addEventListener('keydown', (e) => {
     if (e.key in keyboardShortcutObj) {
@@ -41,6 +42,7 @@ function clickKey() {
       switch (idKey) {
         case 'delete': {
           removeFromOperations();
+          removeNextActionButton();
           updateDisplay();
           break;
         }
@@ -82,7 +84,9 @@ function clickKey() {
           break;
         }
         case 'nextAction':
+          addStringToOperations('deg)');
           removeNextActionButton();
+          updateDisplay();
           break;
         default:
           if (calculatorObj.state === 'stop') resetAll();
