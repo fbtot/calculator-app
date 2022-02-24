@@ -31,11 +31,6 @@ import {
 
 } from 'mathjs';
 
-const config = {
-  angles: 'deg',
-
-};
-
 const { evaluate } = create({
   sqrtDependencies,
   evaluateDependencies,
@@ -64,6 +59,6 @@ const { evaluate } = create({
   asinhDependencies,
   acoshDependencies,
   atanhDependencies,
-}, config);
+});
 
 export { evaluate };
