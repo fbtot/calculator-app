@@ -1,17 +1,5 @@
-import { calculatorObj } from './calculatorObj';
-
-import { addNextActionButton } from './keyboard';
-
 function openFunction(name) {
-  // calculatorObj.function = true;
   return `${name}(`;
-}
-
-function openFunctionAngles(name) {
-  if (calculatorObj.angle === 'deg') {
-    addNextActionButton();
-  }
-  return openFunction(name);
 }
 
 function openCloseFunction(name) {
@@ -120,7 +108,7 @@ const buttonObj = {
     display: '+',
   },
   inverse: {
-    mathjs() { openFunction('inv'); },
+    mathjs() { return openFunction('inv'); },
     scientific: true,
     display: '-',
   },
@@ -130,25 +118,25 @@ const buttonObj = {
     display: '',
   },
   cubicRoot: {
-    mathjs() { openFunction('cbrt'); },
+    mathjs() { return openFunction('cbrt'); },
     scientific: true,
     display: '',
   },
   // TODO: aggiungere tooltip che spiegano il funzionamento di verti tasti
   yRoot: {
-    mathjs() { openFunction('nthRoot'); },
+    mathjs() { return openFunction('nthRoot'); },
     scientific: true,
     display: '',
   },
   in: {
-    mathjs() { openFunction('log'); },
+    mathjs() { return openFunction('log'); },
     scientific: true,
     display: '',
   },
   /* TODO: dato che in mathjs la base del logaritmo va sempre specificata,
   non seve assegnare più di un tasto ai logaritmi */
   logTen: {
-    mathjs() { openFunction('log10'); },
+    mathjs() { return openFunction('log10'); },
     scientific: true,
     display: '',
   },
@@ -178,32 +166,32 @@ const buttonObj = {
     display: '',
   },
   sin: {
-    mathjs() { return openFunctionAngles('sin'); },
+    mathjs() { return openFunction('sin'); },
     scientific: true,
     display: '',
   },
   cos: {
-    mathjs() { openFunctionAngles('cos'); },
+    mathjs() { return openFunction('cos'); },
     scientific: true,
     display: '',
   },
   tan: {
-    mathjs() { openFunctionAngles('tan'); },
+    mathjs() { return openFunction('tan'); },
     scientific: true,
     display: '',
   },
   asin: {
-    mathjs() { openFunctionAngles('asin'); },
+    mathjs() { return openFunction('asin'); },
     scientific: true,
     display: '',
   },
   acos: {
-    mathjs() { openFunctionAngles('acos'); },
+    mathjs() { return openFunction('acos'); },
     scientific: true,
     display: '',
   },
   atan: {
-    mathjs() { openFunctionAngles('atan'); },
+    mathjs() { return openFunction('atan'); },
     scientific: true,
     display: '',
   },
@@ -247,32 +235,32 @@ const buttonObj = {
     display: '',
   },
   sinh: {
-    mathjs() { openFunctionAngles('sinh'); },
+    mathjs() { return openFunction('sinh'); },
     scientific: true,
     display: '',
   },
   cosh: {
-    mathjs() { openFunctionAngles('cosh'); },
+    mathjs() { return openFunction('cosh'); },
     scientific: true,
     display: '',
   },
   tanh: {
-    mathjs() { openFunctionAngles('tanh'); },
+    mathjs() { return openFunction('tanh'); },
     scientific: true,
     display: '',
   },
   asinh: {
-    mathjs() { openFunctionAngles('asinh'); },
+    mathjs() { return openFunction('asinh'); },
     scientific: true,
     display: '',
   },
   acosh: {
-    mathjs() { openFunctionAngles('acosh'); },
+    mathjs() { return openFunction('acosh'); },
     scientific: true,
     display: '',
   },
   atanh: {
-    mathjs() { openFunctionAngles('atanh'); },
+    mathjs() { return openFunction('atanh'); },
     scientific: true,
     display: '',
   },
@@ -305,6 +293,9 @@ const buttonObj = {
     mathjs() { return '(-)'; },
     scientific: false,
     display: '',
+  },
+  deg: {
+    mathjs() { return 'deg'; },
   },
 };
 

@@ -70,33 +70,6 @@
   }
 }
 
-#nextAction {
-  display: none;
-}
-
-.nextAction {
-  #nextAction {
-    display: initial;
-  }
-
-  #equal {
-    display: none;
-  }
-}
-
-#deg {
-  display: none;
-}
-
-.deg {
-  #deg {
-    display: initial;
-  }
-  #radial {
-    display: none;
-  }
-}
-
 .normal-layout {
   .button--scientific-layout {
     display: none;
@@ -117,6 +90,7 @@
   display: grid;
   grid-gap: var(--grid-gap);
   grid-template-columns: repeat(4, minmax(0, 1fr));
+
   .normal-layout & {
     grid-template-areas:
       'seven eight nine delete'
@@ -242,7 +216,4 @@
   #invertNumber         {grid-area: invertNumber}
   #reset                {grid-area: reset}
   #equal                {grid-area: equal}
-  #nextAction           {grid-area: equal}
-          
-
 }

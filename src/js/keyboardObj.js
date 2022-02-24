@@ -65,6 +65,9 @@ const keyboardShortcutObj = {
   '!': {
     id: 'factorial',
   },
+  deg: {
+    id: 'deg',
+  },
 };
 
 export default keyboardShortcutObj;

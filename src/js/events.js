@@ -1,13 +1,12 @@
 import playSoundButton from './buttonSounds';
 import { updateDisplay } from './display';
 import {
-  addToOperations, removeFromOperations, resetAll, addStringToOperations,
+  addToOperations, removeFromOperations, resetAll,
 } from './doTheMath';
 import {
   addActiveButtonClass,
   removeActiveButtonClass,
   toggleSecondFunctions,
-  toggleRadial,
   removeNextActionButton,
 } from './keyboard';
 import keyboardShortcutObj from './keyboardObj';
@@ -73,21 +72,6 @@ function clickKey() {
           toggleSecondFunctions();
           break;
         }
-        case 'radial': {
-          toggleRadial();
-          calculatorObj.angle = 'deg';
-          break;
-        }
-        case 'deg': {
-          toggleRadial();
-          calculatorObj.angle = 'rad';
-          break;
-        }
-        case 'nextAction':
-          addStringToOperations('deg)');
-          removeNextActionButton();
-          updateDisplay();
-          break;
         default:
           if (calculatorObj.state === 'stop') resetAll();
           calculatorObj.state = 'running';
