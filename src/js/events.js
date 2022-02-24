@@ -4,7 +4,11 @@ import {
   addToOperations, removeFromOperations, resetAll,
 } from './doTheMath';
 import {
-  addActiveButtonClass, removeActiveButtonClass, toggleSecondFunctions, toggleRadial, removeNextActionButton,
+  addActiveButtonClass,
+  removeActiveButtonClass,
+  toggleSecondFunctions,
+  toggleRadial,
+  removeNextActionButton,
 } from './keyboard';
 import keyboardShortcutObj from './keyboardObj';
 import { calculatorObj } from './calculatorObj';
