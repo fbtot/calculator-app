@@ -28,7 +28,7 @@ import {
   asinhDependencies,
   acoshDependencies,
   atanhDependencies,
-
+  formatDependencies,
 } from 'mathjs';
 
 const { evaluate } = create({
@@ -61,4 +61,6 @@ const { evaluate } = create({
   atanhDependencies,
 });
 
-export { evaluate };
+const { format } = create({ formatDependencies });
+
+export { evaluate, format };

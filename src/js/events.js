@@ -79,6 +79,10 @@ function keyActions(id) {
       toggleSecondFunctions();
       break;
     }
+    case 'exponentialNotation': {
+      updateDisplay(calculatorObj.resultEE());
+      break;
+    }
     default:
       if (calculatorObj.state === 'stop') resetAll();
       calculatorObj.state = 'running';
