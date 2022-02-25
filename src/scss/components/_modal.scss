@@ -1,9 +1,51 @@
 @use '../index.scss' as *;
 
-.modal {
+.modal-outer-container {
   display: none;
+  background-color: hsla(223, 31%, 20%, 0.5);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: grid;
+  place-items: center;
+
+  &.is-open {
+    display: block;
+  }
 }
 
-.modal.is-open {
-  display: block;
+.modal-container {
+  background-color: var(--key-background);
+  border-radius: 0.5rem;
+  max-width: 540px;
+  width: 540px;
+  padding: 1rem;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    display: flex;
+    align-items: center;
+
+    margin: 0.1rem 0 0.1rem;
+    padding: 0.1rem 0 0.1rem;
+
+    font-size: 0.6rem;
+    line-height: 1rem;
+    border-bottom: 1px solid hsla(223, 31%, 20%, 0.5);
+  }
+}
+
+.modal__result {
+  margin-left: auto;
+}
+
+.modal__title {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
 }
