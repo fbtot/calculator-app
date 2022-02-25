@@ -20,6 +20,7 @@ function pressKey() {
       const idKey = keyboardShortcutObj[e.key].id;
       addActiveButtonClass(idKey);
       playSoundButton();
+      keyActions(idKey);
     }
   });
 
@@ -37,50 +38,53 @@ function clickKey() {
       const idKey = e.target.closest('.button').id;
       console.log(idKey);
       playSoundButton();
+      keyActions(idKey);
 
-      switch (idKey) {
-        case 'delete': {
-          removeFromOperations();
-          removeNextActionButton();
-          updateDisplay();
-          break;
-        }
-        case 'equal': {
-          updateDisplay(calculatorObj.result());
-          calculatorObj.state = 'stop';
-          break;
-        }
-        case 'reset': {
-          resetAll();
-          updateDisplay();
-          break;
-        }
-        case 'plus':
-        case 'minus':
-        case 'multiply':
-        case 'divide': {
-          if (calculatorObj.state === 'stop') {
-            const operationArrLength = calculatorObj.operationArr.length;
-            calculatorObj.operationArr.splice(0, operationArrLength, calculatorObj.result());
-          }
-          calculatorObj.state = 'running';
-          addToOperations(idKey);
-          updateDisplay();
-          break;
-        }
-        case 'secondFunction': {
-          toggleSecondFunctions();
-          break;
-        }
-        default:
-          if (calculatorObj.state === 'stop') resetAll();
-          calculatorObj.state = 'running';
-          addToOperations(idKey);
-          updateDisplay();
-      }
       console.log(calculatorObj);
     });
   });
+}
+function keyActions(id) {
+  switch (id) {
+    case 'delete': {
+      removeFromOperations();
+      removeNextActionButton();
+      updateDisplay();
+      break;
+    }
+    case 'equal': {
+      updateDisplay(calculatorObj.result());
+      calculatorObj.state = 'stop';
+      break;
+    }
+    case 'reset': {
+      resetAll();
+      updateDisplay();
+      break;
+    }
+    case 'plus':
+    case 'minus':
+    case 'multiply':
+    case 'divide': {
+      if (calculatorObj.state === 'stop') {
+        const operationArrLength = calculatorObj.operationArr.length;
+        calculatorObj.operationArr.splice(0, operationArrLength, calculatorObj.result());
+      }
+      calculatorObj.state = 'running';
+      addToOperations(id);
+      updateDisplay();
+      break;
+    }
+    case 'secondFunction': {
+      toggleSecondFunctions();
+      break;
+    }
+    default:
+      if (calculatorObj.state === 'stop') resetAll();
+      calculatorObj.state = 'running';
+      addToOperations(id);
+      updateDisplay();
+  }
 }
 
 export { pressKey, clickKey };
