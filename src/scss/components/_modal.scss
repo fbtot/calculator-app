@@ -1,0 +1,9 @@
+@use '../index.scss' as *;
+
+.modal {
+  display: none;
+}
+
+.modal.is-open {
+  display: block;
+}
