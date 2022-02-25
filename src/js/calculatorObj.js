@@ -6,6 +6,7 @@ const calculatorObj = {
   resultEE() { return format(this.result(), { notation: 'exponential' }); },
   state: 'stop',
   angle: 'rad',
+  memory: '0',
 };
 
 export { calculatorObj };

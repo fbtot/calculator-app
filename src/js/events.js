@@ -1,7 +1,7 @@
 import playSoundButton from './buttonSounds';
 import { updateDisplay } from './display';
 import {
-  addToOperations, removeFromOperations, resetAll,
+  addToOperations, addStringToOperations, removeFromOperations, resetAll,
 } from './doTheMath';
 import {
   addActiveButtonClass,
@@ -11,6 +11,7 @@ import {
 } from './keyboard';
 import keyboardShortcutObj from './keyboardObj';
 import { calculatorObj } from './calculatorObj';
+import { addToMemory, cancelMemory, removeFromMemory } from './memory';
 
 const buttons = document.getElementsByClassName('button');
 
@@ -81,6 +82,23 @@ function keyActions(id) {
     }
     case 'exponentialNotation': {
       updateDisplay(calculatorObj.resultEE());
+      break;
+    }
+    case 'cancelMemory': {
+      cancelMemory();
+      break;
+    }
+    case 'addToMemory': {
+      addToMemory(calculatorObj.result());
+      break;
+    }
+    case 'subtractFromMemory': {
+      removeFromMemory(calculatorObj.result());
+      break;
+    }
+    case 'recallMemory': {
+      addStringToOperations(calculatorObj.memory);
+      updateDisplay();
       break;
     }
     default:

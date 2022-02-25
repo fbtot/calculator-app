@@ -17,6 +17,10 @@ function updateDisplay(string) {
   else displayContentEl.innerHTML = formatString(calculatorObj.operationArr.join(''));
 }
 
+function readDisplayContent() {
+  return displayContentEl.innerText;
+}
+
 function formatString(string) {
   return String(string)
     .replaceAll(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ',')
@@ -24,4 +28,6 @@ function formatString(string) {
     .replaceAll(')', ')</span>');
 }
 
-export { addDisplayContent, replaceDisplayContent, updateDisplay };
+export {
+  addDisplayContent, replaceDisplayContent, updateDisplay, readDisplayContent,
+};
