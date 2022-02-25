@@ -270,7 +270,7 @@ const buttonObj = {
     display: '',
   },
   random: {
-    mathjs() { openCloseFunction('random'); },
+    mathjs() { return openCloseFunction('random'); },
     scientific: true,
     display: '',
   },
