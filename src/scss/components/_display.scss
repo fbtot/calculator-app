@@ -4,6 +4,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  flex-direction: column;
   padding: 0.8rem;
   margin-bottom: 0.8rem;
   min-height: 4rem;
@@ -17,6 +18,20 @@
   font-size: 1.5rem;
   line-height: 2.3rem;
   line-break: anywhere;
+  width: 100%;
+}
+
+.display__memory {
+  --font-size: 0.4rem;
+  text-align: right;
+  width: 100%;
+  font-size: var(--font-size);
+  line-height: var(--font-size);
+  display: none;
+
+  &.visible {
+    display: initial;
+  }
 }
 
 @mixin backgroundHighlight($class, $levels, $i: 1) {

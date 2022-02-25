@@ -1,5 +1,5 @@
 import playSoundButton from './buttonSounds';
-import { updateDisplay } from './display';
+import { displayMemory, updateDisplay } from './display';
 import {
   addToOperations, addStringToOperations, removeFromOperations, resetAll,
 } from './doTheMath';
@@ -86,14 +86,17 @@ function keyActions(id) {
     }
     case 'cancelMemory': {
       cancelMemory();
+      displayMemory();
       break;
     }
     case 'addToMemory': {
       addToMemory(calculatorObj.result());
+      displayMemory();
       break;
     }
     case 'subtractFromMemory': {
       removeFromMemory(calculatorObj.result());
+      displayMemory();
       break;
     }
     case 'recallMemory': {

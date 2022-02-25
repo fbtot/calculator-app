@@ -28,6 +28,30 @@ function formatString(string) {
     .replaceAll(')', ')</span>');
 }
 
+function displayMemory() {
+  displayMemoryVisibility();
+  updateMemoryDisplay();
+}
+
+function displayMemoryVisibility() {
+  const displayMemoryContainer = document.getElementsByClassName('display__memory')[0];
+
+  if (calculatorObj.memory === 0) {
+    displayMemoryContainer.classList.remove('visible');
+  } else {
+    displayMemoryContainer.classList.add('visible');
+  }
+}
+
+function updateMemoryDisplay() {
+  const displayContent = document.getElementById('displayMemoryContent');
+  displayContent.innerText = formatString(calculatorObj.memory);
+}
+
 export {
-  addDisplayContent, replaceDisplayContent, updateDisplay, readDisplayContent,
+  addDisplayContent,
+  replaceDisplayContent,
+  updateDisplay,
+  readDisplayContent,
+  displayMemory,
 };
