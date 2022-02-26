@@ -8,7 +8,7 @@
   margin: auto;
   padding: 1rem;
   transition: max-width 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  max-width: 540px;
+  max-width: calc(540px + var(--padding) * 2);
 
   @include mq($very-small-layout, down) {
     --grid-gap: 0.5rem;
