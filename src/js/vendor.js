@@ -30,7 +30,6 @@ import {
   atanhDependencies,
   formatDependencies,
 } from 'mathjs';
-import MicroModal from 'micromodal';
 
 const { evaluate } = create({
   sqrtDependencies,
@@ -63,7 +62,5 @@ const { evaluate } = create({
 });
 
 const { format } = create({ formatDependencies });
-
-MicroModal.init();
 
 export { evaluate, format };

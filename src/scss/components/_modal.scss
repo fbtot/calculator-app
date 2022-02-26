@@ -20,29 +20,38 @@
   background-color: var(--key-background);
   border-radius: 0.5rem;
   max-width: 540px;
-  width: 540px;
+  width: unset;
+  height: 95vh;
   padding: 1rem;
-
+  overflow: scroll;
   ul {
     margin: 0;
     padding: 0;
     list-style: none;
   }
   li {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
 
     margin: 0.1rem 0 0.1rem;
     padding: 0.1rem 0 0.1rem;
 
     font-size: 0.6rem;
     line-height: 1rem;
-    border-bottom: 1px solid hsla(223, 31%, 20%, 0.5);
+    border-bottom: 1px solid var(--key-shadow);
+
+    span {
+      display: block;
+    }
   }
 }
 
+.modal-operation {
+  white-space: pre-wrap;
+}
+
 .modal__result {
-  margin-left: auto;
+  text-align: right;
 }
 
 .modal__title {
