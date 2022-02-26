@@ -31,12 +31,8 @@
   }
 }
 
-.header__history {
-  margin-right: 0.5rem;
-  cursor: pointer;
-}
-
 .header__theme__title {
+  user-select: none;
   cursor: pointer;
   i {
     font-size: 200%;
@@ -56,6 +52,7 @@
 }
 
 .header__scientific-mode {
+  user-select: none;
   margin-right: 0.5rem;
   color: var(--text-color-2);
   cursor: pointer;
