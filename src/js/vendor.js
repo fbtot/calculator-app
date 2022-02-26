@@ -29,6 +29,8 @@ import {
   acoshDependencies,
   atanhDependencies,
   formatDependencies,
+  unaryMinusDependencies,
+  nthRootDependencies,
 } from 'mathjs';
 
 const { evaluate } = create({
@@ -59,6 +61,8 @@ const { evaluate } = create({
   asinhDependencies,
   acoshDependencies,
   atanhDependencies,
+  unaryMinusDependencies,
+  nthRootDependencies,
 });
 
 const { format } = create({ formatDependencies });

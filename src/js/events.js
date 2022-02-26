@@ -92,11 +92,13 @@ function keyActions(id) {
     case 'addToMemory': {
       addToMemory(calculatorObj.result());
       displayMemory();
+      resetAll();
       break;
     }
     case 'subtractFromMemory': {
       removeFromMemory(calculatorObj.result());
       displayMemory();
+      resetAll();
       break;
     }
     case 'recallMemory': {

@@ -1,3 +1,5 @@
+import { calculatorObj } from './calculatorObj';
+
 function openFunction(name) {
   return `${name}(`;
 }
@@ -206,7 +208,7 @@ const buttonObj = {
     scientific: true,
     display: '',
   },
-  comma: {
+  dot: {
     mathjs() { return '.'; },
     scientific: false,
     display: '.',
@@ -279,8 +281,8 @@ const buttonObj = {
     scientific: true,
     display: '',
   },
-  invertNumber: {
-    mathjs() { return ''; },
+  comma: {
+    mathjs() { return ','; },
     scientific: true,
     display: '',
   },

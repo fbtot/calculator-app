@@ -3,13 +3,13 @@ import { calculatorObj } from './calculatorObj';
 import { readDisplayContent } from './display';
 
 function addToMemory() {
-  const displayContent = readDisplayContent().replace(',', '');
+  const displayContent = readDisplayContent().replaceAll(',', '');
 
   calculatorObj.memory = evaluate(`${displayContent} + ${calculatorObj.memory}`);
 }
 
 function removeFromMemory() {
-  const displayContent = readDisplayContent().replace(',', '');
+  const displayContent = readDisplayContent().replaceAll(',', '');
 
   calculatorObj.memory = evaluate(`${calculatorObj.memory} - ${displayContent} `);
 }

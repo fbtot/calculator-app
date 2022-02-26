@@ -13,7 +13,7 @@ function replaceDisplayContent(id) {
 
 function updateDisplay(string) {
   if (string) displayContentEl.innerHTML = formatString(string);
-  else if (calculatorObj.operationArr.length === 0) displayContentEl.innerHTML = 0;
+  else if (calculatorObj.operationArr.length === 0 || string == 0) displayContentEl.innerHTML = 0;
   else displayContentEl.innerHTML = formatString(calculatorObj.operationArr.join(''));
 }
 

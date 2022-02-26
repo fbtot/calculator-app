@@ -96,14 +96,14 @@
       'seven eight nine delete'
       'four five six plus'
       'one two three minus'
-      'comma zero divide multiply'
+      'dot zero divide multiply'
       'reset reset equal equal';
   }
 
   .scientific-layout & {
     grid-template-areas:
       'secondFunction tenX openParenthesis closeParenthesis'
-      'percentage factorial invertNumber inverse'
+      'percentage factorial comma inverse'
       'addToMemory subtractFromMemory cancelMemory recallMemory'
       'powerOfTwo powerOfThree powerOfY eulersNumber'
       'squareRoot cubicRoot yRoot eToX'
@@ -121,8 +121,8 @@
         'openParenthesis closeParenthesis cancelMemory addToMemory subtractFromMemory recallMemory seven eight nine delete'
         'secondFunction powerOfTwo powerOfThree powerOfY eToX tenX four five six plus'
         'inverse squareRoot cubicRoot yRoot in logTen one two three minus'
-        'factorial sin cos tan eulersNumber exponentialNotation comma zero divide multiply'
-        'radial sinh cosh tanh pi random percentage invertNumber reset equal';
+        'factorial sin cos tan eulersNumber exponentialNotation dot zero divide multiply'
+        'radial sinh cosh tanh pi random percentage comma reset equal';
     }
   }
 }
@@ -136,7 +136,7 @@
         'seven seven eight eight nine nine'
         'four four five five  six six'
         'one one two two three three'
-        'comma comma zero zero delete delete'
+        'dot dot zero zero delete delete'
         'plus plus plus minus minus minus'
         'multiply multiply multiply  divide divide divide'
         'reset reset reset equal equal equal';
@@ -144,7 +144,7 @@
 
     .scientific-layout & {
       grid-template-areas:
-        'secondFunction secondFunction percentage percentage invertNumber invertNumber'
+        'secondFunction secondFunction percentage percentage comma comma'
         'addToMemory addToMemory subtractFromMemory subtractFromMemory openParenthesis openParenthesis'
         'cancelMemory cancelMemory recallMemory recallMemory closeParenthesis closeParenthesis'
         'factorial factorial eulersNumber eulersNumber eToX eToX'
@@ -199,7 +199,7 @@
   #atan                 {grid-area: tan}
   #eulersNumber         {grid-area: eulersNumber}
   #exponentialNotation  {grid-area: exponentialNotation}
-  #comma                {grid-area: comma}
+  #dot                {grid-area: dot}
   #zero                 {grid-area: zero}
   #divide               {grid-area: divide}
   #multiply             {grid-area: multiply}
@@ -213,7 +213,7 @@
   #pi                   {grid-area: pi}
   #random               {grid-area: random}
   #percentage           {grid-area: percentage}
-  #invertNumber         {grid-area: invertNumber}
+  #comma         {grid-area: comma}
   #reset                {grid-area: reset}
   #equal                {grid-area: equal}
 }
