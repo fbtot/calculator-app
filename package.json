@@ -15,7 +15,6 @@
   "devDependencies": {
     "@babel/core": "^7.17.2",
     "@babel/preset-env": "^7.16.11",
-    "@types/jest": "^27.4.0",
     "babel-jest": "^27.5.1",
     "babel-loader": "^8.2.3",
     "clean-webpack-plugin": "^4.0.0",
@@ -26,7 +25,6 @@
     "eslint-plugin-jest": "^26.1.1",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
-    "jest": "^27.5.1",
     "mini-css-extract-plugin": "^2.5.3",
     "postcss": "^8.4.6",
     "postcss-loader": "^6.2.1",
@@ -40,7 +38,6 @@
   "dependencies": {
     "core-js": "^3.21.0",
     "mathjs": "^10.1.1",
-    "micromodal": "^0.4.10",
     "postcss-preset-env": "^7.3.3"
   }
 }
