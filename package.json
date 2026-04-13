@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "core-js": "^3.21.0",
-    "mathjs": "^10.1.1",
+    "mathjs": "^15.2.0",
     "postcss-preset-env": "^7.3.3"
   }
 }
